@@ -156,7 +156,7 @@ POST<br />`domain + /api/order/trade/query`<br />请求参数
 * @param string $cert 用户密钥
 * @return string
 */
-protected static function makeSign(array $arr, string $cert): string
+public function makeSign(array $arr, string $cert): string
 {
     $arr = array_filter($arr, function ($val) {
       	return ($val === '' || $val === null) ? false : true;
