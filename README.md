@@ -21,6 +21,8 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | official | jsapi | 微信jsapi 支付 |
 |  | h5 | 微信h5支付(暂未开放) |
 |  | native | 微信二维码支付 |
+| wx_special | jsapi | 微信二级商户jsapi(服务商) |
+|  | native | 微信二级商户二维码支付(服务商) |
 | alipay | h5 | 支付宝h5支付 |
 |  | pc | 支付宝pc页面支付 |
 |  | app | 支付宝app支付 |
@@ -44,6 +46,8 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | 微信jsapi 支付 | official@@jsapi |
 | 微信h5支付(暂未开放) | official@@h5 |
 | 微信二维码支付 | official@@native |
+| 微信二级商户jsapi支付 | wx_special@@jsapi |
+| 微信二级商户二维码支付 | wx_special@@native |
 | 支付宝h5支付 | alipay@@h5 |
 | 支付宝pc支付 | alipay@@pc |
 | 支付宝app支付 | alipay@@app |
@@ -59,7 +63,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | 源支付 | fourth@@yuan |
 | JPAY | fourth@@jpay |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1674020209054-5683d6c2-baa9-4880-8aca-547ba31d3c3a.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1676199247441-d6261802-0940-4f0d-bde1-0cd7dc6340fc.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
@@ -150,8 +154,9 @@ POST<br />`domain + /api/order/trade/query`<br />请求参数
 * 签名
 * @param array $arr  参与签名的数组
 * @param string $cert 用户密钥
+* @return string
 */
-protected static function makeSign(array $arr, string $cert)
+protected static function makeSign(array $arr, string $cert): string
 {
     $arr = array_filter($arr, function ($val) {
       	return ($val === '' || $val === null) ? false : true;
