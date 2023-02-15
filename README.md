@@ -30,6 +30,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 |  | face_to_face | 支付宝当面付 |
 | person | person | 个人收款码 |
 | fourth | heiyun | 第四方黑云平台 |
+|  | unipay | 云闪付 |
 |  | obl | obl平台 |
 |  | pepsi | 百事 |
 |  | sp | SP |
@@ -55,6 +56,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | 支付宝当面付 | alipay@@face_to_face |
 | 个人收款码 | person@@persons |
 | 第四方黑云平台 | fourth@@heiyun |
+| 云闪付 | fourth@@unipay |
 | obl平台 | fourth@@obl |
 | 百事 | fourth@@pepsi |
 | SP | fourth@@sp |
@@ -63,7 +65,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | 源支付 | fourth@@yuan |
 | JPAY | fourth@@jpay |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1676199247441-d6261802-0940-4f0d-bde1-0cd7dc6340fc.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1676450782539-317047fd-af8e-4a04-8bb7-ba74dba45e64.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
@@ -156,7 +158,7 @@ POST<br />`domain + /api/order/trade/query`<br />请求参数
 * @param string $cert 用户密钥
 * @return string
 */
-public function makeSign(array $arr, string $cert): string
+protected static function makeSign(array $arr, string $cert): string
 {
     $arr = array_filter($arr, function ($val) {
       	return ($val === '' || $val === null) ? false : true;
