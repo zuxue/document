@@ -37,35 +37,37 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 |  | yiyuan | 益远微信客服Native |
 |  | xiaoyu | 小雨 |
 |  | yuan | 源支付(个码) |
+|  | spu | SPU |
 |  | jpay | JPAY |
 
-**提示：也可以使用**`**省略支付产品**`**的写法**<br />方法：`vendor_type = 商户类型 + "@@" + 支付产品`<br />使用缩写方法传入`vendor_type` 则可不传`product`，传了也会被忽略
+**提示：也可以使用**`**省略支付产品**`**的写法**<br />方法：`vendor_type = 商户类型 + "@@" + 支付产品`<br />使用缩写方法传入`vendor_type` 则可不传`product`，传了也会被忽略<br />`@@和数字方式二选一即可`
 <a name="PvTs3"></a>
 #### 缩写对照表
-| **支付产品** | **参数(**`**vendor_type**`**)** |
-| --- | --- |
-| 微信jsapi 支付 | official@@jsapi |
-| 微信h5支付(暂未开放) | official@@h5 |
-| 微信二维码支付 | official@@native |
-| 微信二级商户jsapi支付 | wx_special@@jsapi |
-| 微信二级商户二维码支付 | wx_special@@native |
-| 支付宝h5支付 | alipay@@h5 |
-| 支付宝pc支付 | alipay@@pc |
-| 支付宝app支付 | alipay@@app |
-| 支付宝uid支付 | alipay@@uid |
-| 支付宝当面付 | alipay@@face_to_face |
-| 个人收款码 | person@@persons |
-| 第四方黑云平台 | fourth@@heiyun |
-| 云闪付 | fourth@@unipay |
-| obl平台 | fourth@@obl |
-| 百事 | fourth@@pepsi |
-| SP | fourth@@sp |
-| 益远微信客服Native | fourth@@yiyuan |
-| 小雨 | fourth@@xiaoyu |
-| 源支付 | fourth@@yuan |
-| JPAY | fourth@@jpay |
+| **支付产品** | **简写方式1(**`**vendor_type**`**)** | **简写方式2(**`**vendor_type**`**)** |
+| --- | --- | --- |
+| 微信二维码支付 | official@@native | 0000 |
+| 微信jsapi 支付 | official@@jsapi | 0001 |
+| 微信h5支付(暂未开放) | official@@h5 | 0002 |
+| 微信二级商户二维码支付 | wx_special@@native | 0100 |
+| 微信二级商户jsapi支付 | wx_special@@jsapi | 0101 |
+| 支付宝UID支付 | alipay@@uid | 0300 |
+| 支付宝当面付 | alipay@@face_to_face | 0301 |
+| 支付宝h5支付 | alipay@@h5 | 0303 |
+| 支付宝pc支付 | alipay@@pc | 0304 |
+| 支付宝app支付 | alipay@@app | 0305 |
+| 个人收款码 | person@@persons | 0400 |
+| 第四方黑云平台 | fourth@@heiyun | 0500 |
+| obl平台 | fourth@@obl | 0501 |
+| 百事 | fourth@@pepsi | 0502 |
+| SP | fourth@@sp | 0503 |
+| 益远微信客服Native | fourth@@yiyuan | 0504 |
+| 小雨 | fourth@@xiaoyu | 0505 |
+| 源支付 | fourth@@yuan | 0506 |
+| JPAY | fourth@@jpay | 0507 |
+| SPU | fourth@@spu | 0508 |
+| 云闪付 | fourth@@unipay | 0509 |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1676450782539-317047fd-af8e-4a04-8bb7-ba74dba45e64.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1676451140127-5faad6b9-4d4a-4ac5-a13d-80a5e994eb30.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
