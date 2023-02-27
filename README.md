@@ -39,6 +39,8 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 |  | yuan | 源支付(个码) |
 |  | spu | SPU |
 |  | jpay | JPAY |
+|  | hand | 翰银 |
+|  | plameng | 派拉蒙 |
 
 **提示：也可以使用**`**省略支付产品**`**的写法**<br />方法：`vendor_type = 商户类型 + "@@" + 支付产品`<br />使用缩写方法传入`vendor_type` 则可不传`product`，传了也会被忽略<br />`@@和数字方式二选一即可`
 <a name="PvTs3"></a>
@@ -66,8 +68,10 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | JPAY | fourth@@jpay | 0507 |
 | SPU | fourth@@spu | 0508 |
 | 云闪付 | fourth@@unipay | 0509 |
+| 翰银 | fourth@@hand | 0510 |
+| 派拉蒙 | fourth@@plameng | 0511 |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1676451140127-5faad6b9-4d4a-4ac5-a13d-80a5e994eb30.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1677467766866-1e03e1b1-82a8-4879-8b23-d285a6488566.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
