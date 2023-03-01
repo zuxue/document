@@ -31,7 +31,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | person | person | 个人收款码 |
 | fourth | heiyun | 第四方黑云平台 |
 |  | unipay | 云闪付 |
-|  | obl | obl平台 |
+|  | jiutian | 九天 |
 |  | pepsi | 百事 |
 |  | sp | SP |
 |  | yiyuan | 益远微信客服Native |
@@ -41,7 +41,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 |  | jpay | JPAY |
 |  | hand | 翰银 |
 |  | plameng | 派拉蒙 |
-|  | jiutian | 九天 |
+|  | obl | obl平台 |
 |  | pangu | 盘古 |
 
 **提示：也可以使用**`**省略支付产品**`**的写法**<br />方法：`vendor_type = 商户类型 + "@@" + 支付产品`<br />使用缩写方法传入`vendor_type` 则可不传`product`，传了也会被忽略<br />`@@和数字方式二选一即可`
@@ -61,7 +61,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | 支付宝app支付 | alipay@@app | 0305 |
 | 个人收款码 | person@@persons | 0400 |
 | 第四方黑云平台 | fourth@@heiyun | 0500 |
-| obl平台 | fourth@@obl | 0501 |
+| 九天 | fourth@@jiutian | 0501 |
 | 百事 | fourth@@pepsi | 0502 |
 | SP | fourth@@sp | 0503 |
 | 益远微信客服Native | fourth@@yiyuan | 0504 |
@@ -72,7 +72,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | 云闪付 | fourth@@unipay | 0509 |
 | 翰银 | fourth@@hand | 0510 |
 | 派拉蒙 | fourth@@plameng | 0511 |
-| 九天 | fourth@@jiutian | 0512 |
+| obl平台 | fourth@@obl | 0512 |
 | 盘古 | fourth@@pangu | 0513 |
 
 ![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1677514336793-5910c87b-4a5e-47ca-bedd-ea7ece80fa0e.jpeg)<br />返回数据
