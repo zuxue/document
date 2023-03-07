@@ -43,6 +43,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 |  | plameng | 派拉蒙 |
 |  | obl | obl平台 |
 |  | pangu | 盘古 |
+|  | jiuxiao | 九霄 |
 
 **提示：也可以使用**`**省略支付产品**`**的写法**<br />方法：`vendor_type = 商户类型 + "@@" + 支付产品`<br />使用缩写方法传入`vendor_type` 则可不传`product`，传了也会被忽略<br />`@@和数字方式二选一即可`
 <a name="PvTs3"></a>
@@ -74,8 +75,9 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | 派拉蒙 | fourth@@plameng | 0511 |
 | obl平台 | fourth@@obl | 0512 |
 | 盘古 | fourth@@pangu | 0513 |
+| 九霄 | fourth@@jiuxiao | 0514 |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1677514336793-5910c87b-4a5e-47ca-bedd-ea7ece80fa0e.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1678201217666-5a278846-b5ab-4069-981d-bf481c7a95ab.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
