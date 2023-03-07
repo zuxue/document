@@ -59,7 +59,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | 支付宝h5支付 | alipay@@h5 | 0303 |
 | 支付宝pc支付 | alipay@@pc | 0304 |
 | 支付宝app支付 | alipay@@app | 0305 |
-| 个人收款码 | person@@persons | 0400 |
+| 个人收款码 | person@@person | 0400 |
 | 第四方黑云平台 | fourth@@heiyun | 0500 |
 | 九天 | fourth@@jiutian | 0501 |
 | 百事 | fourth@@pepsi | 0502 |
