@@ -9,13 +9,13 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | fee | int | Y | 金额(单位:分)<br />当商户类型为person时需要能被100整除，即为正整数的**元 |
 | jump_url | string | Y | 订单完成跳转url |
 | notice_url | string | Y | 订单完成异步通知url |
-| vendor_type | string | Y | 商户类型<br />(缩写方式见下方<br />`缩写对照表`)<br />official 公众号商户<br />alipay 支付宝<br />person 个人商户<br />fourth 第四方商户 |
+| vendor_type | string | Y | 商户类型<br />(缩写方式见下方<br />`缩写对照表`)<br />official 公众号商户<br />alipay 支付宝<br />person 个人商户<br />fourth 第四方商户<br />alipay_sub 支付宝授权商户<br />alipay_zft 支付宝直付通商户 |
 | product | string | N | 见下方 支付产品<br />(若`vendor_type`使用<br />`缩写方式`，则此参数忽略，否则必填) |
 | desc | string | N | 商品描述 |
 | sign | string | Y | 签名 |
 
-商户类型与产品对应关系
-
+<a name="yRJBg"></a>
+#### 商户类型与产品对应关系
 | **商户类型** | **支付产品** | **描述** |
 | --- | --- | --- |
 | official | jsapi | 微信jsapi 支付 |
@@ -45,6 +45,16 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 |  | obl | obl平台 |
 |  | pangu | 盘古 |
 |  | jiuxiao | 九霄 |
+| alipay_sub | h5 | 支付宝应用授权h5支付 |
+|  | pc | 支付宝应用授权pc页面支付 |
+|  | app | 支付宝应用授权app支付 |
+|  | face_to_face | 支付宝应用授权当面付 |
+|  | mini_program | 支付宝应用授权小程序支付 |
+| alipay_zft | h5 | 支付宝直付通商户h5支付 |
+|  | pc | 支付宝直付通商户pc页面支付 |
+|  | app | 支付宝直付通商户app支付 |
+|  | face_to_face | 支付宝直付通商户当面付 |
+|  | mini_program | 支付宝直付通商户小程序支付 |
 
 **提示：也可以使用**`**省略支付产品**`**的写法**<br />方法：`vendor_type = 商户类型 + "@@" + 支付产品`<br />使用缩写方法传入`vendor_type` 则可不传`product`，传了也会被忽略<br />`@@和数字方式二选一即可`
 <a name="PvTs3"></a>
@@ -58,6 +68,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | 微信二级商户jsapi支付 | wx_special@@jsapi | 0101 |
 | 支付宝UID支付 | alipay@@uid | 0300 |
 | 支付宝当面付 | alipay@@face_to_face | 0301 |
+| 支付宝小程序支付 | alipay@@mini_program | 0302 |
 | 支付宝h5支付 | alipay@@h5 | 0303 |
 | 支付宝pc支付 | alipay@@pc | 0304 |
 | 支付宝app支付 | alipay@@app | 0305 |
@@ -78,8 +89,18 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | obl平台 | fourth@@obl | 0512 |
 | 盘古 | fourth@@pangu | 0513 |
 | 九霄 | fourth@@jiuxiao | 0514 |
+| 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
+| 支付宝应用授权小程序支付 | alipay_sub@@mini_program | 0601 |
+| 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
+| 支付宝应用授权pc支付 | alipay_sub@@pc | 0603 |
+| 支付宝应用授权app支付 | alipay_sub@@app | 0604 |
+| 支付宝直付通当面付 | alipay_zft@@face_to_face | 0700 |
+| 支付宝直付通小程序支付 | alipay_zft@@mini_program | 0701 |
+| 支付宝直付通h5支付 | alipay_zft@@h5 | 0702 |
+| 支付宝直付通pc支付 | alipay_zft@@pc | 0703 |
+| 支付宝直付通app支付 | alipay_zft@@app | 0704 |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1678340943443-20386116-cc55-4817-9b9f-0cd6b9e6474c.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1678864138204-78aa76e9-7fab-4252-8ee6-9c9a9e2d6eaf.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
