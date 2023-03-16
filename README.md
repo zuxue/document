@@ -45,6 +45,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 |  | obl | obl平台 |
 |  | pangu | 盘古 |
 |  | jiuxiao | 九霄 |
+|  | yi | 艺支付 |
 | alipay_sub | h5 | 支付宝应用授权h5支付 |
 |  | pc | 支付宝应用授权pc页面支付 |
 |  | app | 支付宝应用授权app支付 |
@@ -89,6 +90,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | obl平台 | fourth@@obl | 0512 |
 | 盘古 | fourth@@pangu | 0513 |
 | 九霄 | fourth@@jiuxiao | 0514 |
+| 艺支付 | fourth@@yi | 0515 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_program | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
@@ -100,7 +102,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | 支付宝直付通pc支付 | alipay_zft@@pc | 0703 |
 | 支付宝直付通app支付 | alipay_zft@@app | 0704 |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1678864138204-78aa76e9-7fab-4252-8ee6-9c9a9e2d6eaf.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1678960093726-a500677d-5681-406a-98ea-8b7dde5c1b66.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
