@@ -46,6 +46,8 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 |  | pangu | 盘古 |
 |  | jiuxiao | 九霄 |
 |  | yi | 艺支付 |
+|  | huifu | 汇付 |
+|  | kuai | 快付 |
 | alipay_sub | h5 | 支付宝应用授权h5支付 |
 |  | pc | 支付宝应用授权pc页面支付 |
 |  | app | 支付宝应用授权app支付 |
@@ -91,6 +93,8 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | 盘古 | fourth@@pangu | 0513 |
 | 九霄 | fourth@@jiuxiao | 0514 |
 | 艺支付 | fourth@@yi | 0515 |
+| 汇付 | fourth@@huifu | 0516 |
+| 快付 | fourth@@kuai | 0517 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_program | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
