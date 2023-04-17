@@ -48,6 +48,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 |  | yi | 艺支付 |
 |  | huifu | 汇付 |
 |  | kuai | 快付 |
+|  | orange | 橙子 |
 | alipay_sub | h5 | 支付宝应用授权h5支付 |
 |  | pc | 支付宝应用授权pc页面支付 |
 |  | app | 支付宝应用授权app支付 |
@@ -95,6 +96,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | 艺支付 | fourth@@yi | 0515 |
 | 汇付 | fourth@@huifu | 0516 |
 | 快付 | fourth@@kuai | 0517 |
+| 橙子 | fourth@@orange | 0518 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_program | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
@@ -106,7 +108,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | 支付宝直付通pc支付 | alipay_zft@@pc | 0703 |
 | 支付宝直付通app支付 | alipay_zft@@app | 0704 |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1678960093726-a500677d-5681-406a-98ea-8b7dde5c1b66.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1681704330466-ea6e9cc3-79eb-4b4b-9c0e-f064139a3cff.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
