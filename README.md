@@ -51,6 +51,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 |  | orange | 橙子 |
 |  | zhifu | 智付 |
 |  | dadi | 大地 |
+|  | dashun | 大顺 |
 | alipay_sub | h5 | 支付宝应用授权h5支付 |
 |  | pc | 支付宝应用授权pc页面支付 |
 |  | app | 支付宝应用授权app支付 |
@@ -101,6 +102,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | 橙子 | fourth@@orange | 0518 |
 | 智付 | fourth@@zhifu | 0519 |
 | 大地 | fourth@@dadi | 0520 |
+| 大顺 | fourth@@dashun | 0521 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_program | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
