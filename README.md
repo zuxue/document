@@ -1,6 +1,6 @@
 <a name="HT8d0"></a>
 ### 下单
-POST<br />`domain + /collection/place/create`<br />请求参数
+POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-www-form-urlencoded;charset=utf-8`<br />请求参数
 
 | **参数名** | **参数类型** | **是否必填** | **示例、说明** |
 | --- | --- | --- | --- |
@@ -53,6 +53,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 |  | dadi | 大地 |
 |  | dashun | 大顺 |
 |  | wx_receipt | 微信收款单 |
+|  | cool | COOL-PAY |
 | alipay_sub | h5 | 支付宝应用授权h5支付 |
 |  | pc | 支付宝应用授权pc页面支付 |
 |  | app | 支付宝应用授权app支付 |
@@ -105,6 +106,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | 大地 | fourth@@dadi | 0520 |
 | 大顺 | fourth@@dashun | 0521 |
 | 微信收款单 | fourth@@wx_receipt | 0522 |
+| COOL-PAY | fourth@@cool | 0523 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_program | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
@@ -116,7 +118,7 @@ POST<br />`domain + /collection/place/create`<br />请求参数
 | 支付宝直付通pc支付 | alipay_zft@@pc | 0703 |
 | 支付宝直付通app支付 | alipay_zft@@app | 0704 |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1681704330466-ea6e9cc3-79eb-4b4b-9c0e-f064139a3cff.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1682438866640-7f3639a5-798d-4b6d-b4e9-f4419bbabfaa.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
@@ -153,7 +155,7 @@ GET<br />用户支付完成后，平台会自动`302跳转`至下单时传入的
 
 <a name="GTp7M"></a>
 ### 订单查询
-POST<br />`domain + /api/order/trade/query`<br />请求参数
+POST<br />`domain + /api/order/trade/query`<br />`Content-Type: application/x-www-form-urlencoded;charset=utf-8`<br />请求参数
 
 | **参数名** | **参数类型** | **是否必填** | **示例、说明** |
 | --- | --- | --- | --- |
@@ -179,7 +181,7 @@ POST<br />`domain + /api/order/trade/query`<br />请求参数
 ```
 <a name="xMUbr"></a>
 ### 异步回调
-**请求方式：**POST<br />**回调URL：**该链接是通过基础下单接口中的请求参数“notice_url”来设置的，请确保回调URL是外部可正常访问的，且不能携带后缀参数，否则可能导致商户无法接收到微信的回调通知信息。回调URL示例：“http://**.**.com/**/**”<br />**通知规则**<br />用户支付完成后，平台会把相关支付结果和用户信息发送给商户，商户需要接收处理该消息，并返回应答。<br />对后台通知交互时，如果收到商户的应答不符合规范或超时，平台认为通知失败，平台会通过一定的策略定期重新发起通知，尽可能提高通知的成功率，但不保证通知最终能成功。（通知频率为15s/15s/30s/3m/10m/20m/30m/30m/30m/60m/3h/3h/3h/6h/6h - 总计 24h4m）<br />在发送通知后接收到字符串`**SUCCESS**`时视为应答成功<br />**通知报文**
+**请求方式：**POST<br />`Content-Type: application/x-www-form-urlencoded;charset=utf-8`<br />**回调URL：**该链接是通过基础下单接口中的请求参数“notice_url”来设置的，请确保回调URL是外部可正常访问的，且不能携带后缀参数，否则可能导致商户无法接收到微信的回调通知信息。回调URL示例：“http://**.**.com/**/**”<br />**通知规则**<br />用户支付完成后，平台会把相关支付结果和用户信息发送给商户，商户需要接收处理该消息，并返回应答。<br />对后台通知交互时，如果收到商户的应答不符合规范或超时，平台认为通知失败，平台会通过一定的策略定期重新发起通知，尽可能提高通知的成功率，但不保证通知最终能成功。（通知频率为15s/15s/30s/3m/10m/20m/30m/30m/30m/60m/3h/3h/3h/6h/6h - 总计 24h4m）<br />在发送通知后接收到字符串`**SUCCESS**`时视为应答成功<br />**通知报文**
 
 | **参数名** | **参数类型** | **是否必填** | **示例、说明** |
 | --- | --- | --- | --- |
