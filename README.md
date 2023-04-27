@@ -54,6 +54,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | dashun | 大顺 |
 |  | wx_receipt | 微信收款单 |
 |  | cool | COOL-PAY |
+|  | linyun | 林云 |
 | alipay_sub | h5 | 支付宝应用授权h5支付 |
 |  | pc | 支付宝应用授权pc页面支付 |
 |  | app | 支付宝应用授权app支付 |
@@ -107,6 +108,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 大顺 | fourth@@dashun | 0521 |
 | 微信收款单 | fourth@@wx_receipt | 0522 |
 | COOL-PAY | fourth@@cool | 0523 |
+| 林云 | fourth@@linyun | 0524 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_program | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
