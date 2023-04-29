@@ -56,6 +56,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | cool | COOL-PAY |
 |  | linyun | 林云 |
 |  | qilin | 麒麟 |
+|  | xx | XX支付 |
 | alipay_sub | h5 | 支付宝应用授权h5支付 |
 |  | pc | 支付宝应用授权pc页面支付 |
 |  | app | 支付宝应用授权app支付 |
@@ -111,6 +112,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | COOL-PAY | fourth@@cool | 0523 |
 | 林云 | fourth@@linyun | 0524 |
 | 麒麟 | fourth@@qilin | 0525 |
+| XX支付 | fourth@@xx | 0526 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_program | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
@@ -122,7 +124,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝直付通pc支付 | alipay_zft@@pc | 0703 |
 | 支付宝直付通app支付 | alipay_zft@@app | 0704 |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1682696561728-ce18c9fd-3408-47c3-944d-efe1864e0a64.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1682779975190-7657d7b7-a95a-4c1a-9cd8-0967c303d9cf.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
