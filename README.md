@@ -57,6 +57,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | linyun | 林云 |
 |  | qilin | 麒麟 |
 |  | xx | XX支付 |
+|  | shenzhou | 神州 |
 | alipay_sub | h5 | 支付宝应用授权h5支付 |
 |  | pc | 支付宝应用授权pc页面支付 |
 |  | app | 支付宝应用授权app支付 |
@@ -113,6 +114,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 林云 | fourth@@linyun | 0524 |
 | 麒麟 | fourth@@qilin | 0525 |
 | XX支付 | fourth@@xx | 0526 |
+| 神州 | fourth@@shenzhou | 0527 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_program | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
