@@ -28,6 +28,8 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | app | 支付宝app支付 |
 |  | uid | 支付宝uid支付 |
 |  | face_to_face | 支付宝当面付 |
+|  | app | 支付宝app支付 |
+|  | jsapi | 支付宝jsapi支付 |
 | person | person | 个人收款码(固定金额) |
 |  | versatile | 个人收款码(通用二维码) |
 | fourth | heiyun | 第四方黑云平台 |
@@ -86,6 +88,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝h5支付 | alipay@@h5 | 0303 |
 | 支付宝pc支付 | alipay@@pc | 0304 |
 | 支付宝app支付 | alipay@@app | 0305 |
+| 支付宝jsapi支付 | alipay@@jsapi | 0306 |
 | 个人收款码(固定金额二维码) | person@@persons | 0400 |
 | 个人收款码(通用二维码) | person@@versatile | 0401 |
 | 第四方黑云平台 | fourth@@heiyun | 0500 |
@@ -128,7 +131,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝直付通pc支付 | alipay_zft@@pc | 0703 |
 | 支付宝直付通app支付 | alipay_zft@@app | 0704 |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1682779975190-7657d7b7-a95a-4c1a-9cd8-0967c303d9cf.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1683393070848-d4880814-7526-4891-8755-9cfd5c2f1bf2.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
