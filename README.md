@@ -251,7 +251,11 @@ protected static function makeSign(array $arr, string $cert): string
 | --- | --- |
 | 0 | 成功 |
 | 2000 | 下单失败 |
+
+<a name="uLuYV"></a>
 ### 状态码
 | **status** | **message** |
 | --- | --- |
-| succ | success |
+| success | 成功 |
+| 其他 | 失败 |
+
