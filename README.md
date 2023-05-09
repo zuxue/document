@@ -251,4 +251,7 @@ protected static function makeSign(array $arr, string $cert): string
 | --- | --- |
 | 0 | 成功 |
 | 2000 | 下单失败 |
-
+### 状态码
+| **status** | **message** |
+| --- | --- |
+| succ | success |
