@@ -64,6 +64,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | hftx | 汇付天下 |
 |  | alain | ALAIN |
 |  | luyifa | 路易发 |
+|  | innovate | 创新 |
 | alipay_sub | h5 | 支付宝应用授权h5支付 |
 |  | pc | 支付宝应用授权pc页面支付 |
 |  | app | 支付宝应用授权app支付 |
@@ -126,6 +127,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 汇付天下 | fourth@@hftx | 0529 |
 | ALAIN | fourth@@alain | 0530 |
 | 路易发 | fourth@@luyifa | 0531 |
+| 创新 | fourth@@innovate | 0532 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_program | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
@@ -137,7 +139,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝直付通pc支付 | alipay_zft@@pc | 0703 |
 | 支付宝直付通app支付 | alipay_zft@@app | 0704 |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1683632918623-e5c41002-c0e2-49e4-bfec-54218ef6c7b9.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1683710568453-c0aa52e9-8791-416a-89f4-d24624bcee5b.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
