@@ -71,6 +71,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | lianbang | 连邦 |
 |  | sand | 杉德 |
 |  | gopay | GoPay |
+|  | webpay | 微宝付 |
 | alipay_sub | h5 | 支付宝应用授权h5支付 |
 |  | pc | 支付宝应用授权pc页面支付 |
 |  | app | 支付宝应用授权app支付 |
@@ -139,7 +140,8 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 明智 | fourth@@mingzhi | 0535 |
 | 连邦 | fourth@@lianbang | 0536 |
 | 杉德 | fourth@@sand | 0537 |
-| 杉德 | fourth@@gopay | 0538 |
+| GoPay | fourth@@gopay | 0538 |
+| 微宝付 | fourth@@webpay | 0539 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_program | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
