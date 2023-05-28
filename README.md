@@ -147,11 +147,13 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
 | 支付宝应用授权pc支付 | alipay_sub@@pc | 0603 |
 | 支付宝应用授权app支付 | alipay_sub@@app | 0604 |
+| 支付宝应用授权jsapi支付 | alipay_sub@@jsapi | 0605 |
 | 支付宝直付通当面付 | alipay_zft@@face_to_face | 0700 |
 | 支付宝直付通小程序支付 | alipay_zft@@mini_program | 0701 |
 | 支付宝直付通h5支付 | alipay_zft@@h5 | 0702 |
 | 支付宝直付通pc支付 | alipay_zft@@pc | 0703 |
 | 支付宝直付通app支付 | alipay_zft@@app | 0704 |
+| 支付宝直付通jsapi支付 | alipay_zft@@jsapi | 0705 |
 
 ![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1684659384039-4f3d6159-70ab-45d8-bac5-79234a68ebdb.jpeg)<br />返回数据
 ```json
