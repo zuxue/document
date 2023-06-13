@@ -76,6 +76,8 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | yongsheng | 永盛 |
 |  | cpay | CPAY |
 |  | zhuque | 朱雀 |
+|  | flylong | 飞龙 |
+|  | yinglian | 盈联 |
 | alipay_sub | h5 | 支付宝应用授权h5支付 |
 |  | pc | 支付宝应用授权pc页面支付 |
 |  | app | 支付宝应用授权app支付 |
@@ -150,6 +152,8 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 永盛 | fourth@@yongsheng | 0541 |
 | CPAY | fourth@@cpay | 0542 |
 | 朱雀 | fourth@@zhuque | 0543 |
+| 飞龙 | fourth@@flylong | 0544 |
+| 盈联 | fourth@@yinglian | 0545 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_program | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
