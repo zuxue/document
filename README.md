@@ -80,6 +80,8 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | yinglian | 盈联 |
 |  | aspx | Aspx |
 |  | nihao | NihaoPay |
+|  | qidian | 起点 |
+|  | shun | 顺 |
 | alipay_sub | h5 | 支付宝应用授权h5支付 |
 |  | pc | 支付宝应用授权pc页面支付 |
 |  | app | 支付宝应用授权app支付 |
@@ -158,6 +160,8 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 盈联 | fourth@@yinglian | 0545 |
 | Aspx | fourth@@aspx | 0546 |
 | NihaoPay | fourth@@nihao | 0547 |
+| 起点 | fourth@@qidian | 0548 |
+| 顺 | fourth@@shun | 0549 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_program | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
