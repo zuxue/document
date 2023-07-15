@@ -82,6 +82,12 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | nihao | NihaoPay |
 |  | qidian | 起点 |
 |  | shun | 顺 |
+|  | unknown | 无名 |
+|  | lakala | 拉卡拉 |
+|  | lei | 雷支付 |
+|  | jhpay | JhPay |
+|  | tb | Tb |
+|  | yunwei | 运维 |
 | alipay_sub | h5 | 支付宝应用授权h5支付 |
 |  | pc | 支付宝应用授权pc页面支付 |
 |  | app | 支付宝应用授权app支付 |
@@ -162,6 +168,12 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | NihaoPay | fourth@@nihao | 0547 |
 | 起点 | fourth@@qidian | 0548 |
 | 顺 | fourth@@shun | 0549 |
+| 无名 | fourth@@unknown | 0550 |
+| 拉卡拉 | fourth@@lakala | 0551 |
+| 雷支付 | fourth@@lei | 0552 |
+| JhPay | fourth@@jhpay | 0553 |
+| Tb | fourth@@tb | 0554 |
+| 运维 | fourth@@yunwei | 0555 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_program | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
@@ -175,7 +187,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝直付通app支付 | alipay_zft@@app | 0704 |
 | 支付宝直付通jsapi支付 | alipay_zft@@jsapi | 0705 |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1684659384039-4f3d6159-70ab-45d8-bac5-79234a68ebdb.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1689414490996-74ebbf1c-efc0-48a6-a026-0ef75703eb41.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
