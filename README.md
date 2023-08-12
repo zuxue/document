@@ -29,8 +29,9 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | uid | 支付宝uid支付 |
 |  | face_to_face | 支付宝当面付 |
 |  | app | 支付宝app支付 |
-|  | jsapi | 支付宝jsapi支付 |
 |  | pre_auth | 支付宝预授权支付 |
+|  | mini_jsapi | 小程序jsapi |
+|  | mini_auth | 小程序预授权 |
 | person | person | 个人收款码(固定金额) |
 |  | versatile | 个人收款码(通用二维码) |
 | fourth | heiyun | 第四方黑云平台 |
@@ -112,12 +113,12 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 微信二级商户jsapi支付 | wx_special@@jsapi | 0101 |
 | 支付宝UID支付 | alipay@@uid | 0300 |
 | 支付宝当面付 | alipay@@face_to_face | 0301 |
-| 支付宝小程序支付 | alipay@@mini_program | 0302 |
+| 支付宝小程序JSAPI支付 | alipay@@mini_jsapi | 0302 |
 | 支付宝h5支付 | alipay@@h5 | 0303 |
 | 支付宝pc支付 | alipay@@pc | 0304 |
 | 支付宝app支付 | alipay@@app | 0305 |
-| 支付宝jsapi支付 | alipay@@jsapi | 0306 |
-| 支付宝预授权 | alipay@@pre_auth | 0307 |
+| 支付宝小程序预授权 | alipay@@mini_auth | 0306 |
+| 支付宝H5预授权 | alipay@@pre_auth | 0307 |
 | 个人收款码(固定金额二维码) | person@@persons | 0400 |
 | 个人收款码(通用二维码) | person@@versatile | 0401 |
 | 第四方黑云平台 | fourth@@heiyun | 0500 |
