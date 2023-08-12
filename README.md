@@ -94,12 +94,12 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | pc | 支付宝应用授权pc页面支付 |
 |  | app | 支付宝应用授权app支付 |
 |  | face_to_face | 支付宝应用授权当面付 |
-|  | mini_program | 支付宝应用授权小程序支付 |
+|  | mini_jsapi | 支付宝应用授权小程序支付 |
 | alipay_zft | h5 | 支付宝直付通商户h5支付 |
 |  | pc | 支付宝直付通商户pc页面支付 |
 |  | app | 支付宝直付通商户app支付 |
 |  | face_to_face | 支付宝直付通商户当面付 |
-|  | mini_program | 支付宝直付通商户小程序支付 |
+|  | mini_jsapi | 支付宝直付通商户小程序支付 |
 
 **提示：也可以使用**`**省略支付产品**`**的写法**<br />方法：`vendor_type = 商户类型 + "@@" + 支付产品`<br />使用缩写方法传入`vendor_type` 则可不传`product`，传了也会被忽略<br />`@@和数字方式二选一即可`
 <a name="PvTs3"></a>
@@ -178,19 +178,21 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | Tb | fourth@@tb | 0554 |
 | 运维 | fourth@@yunwei | 0555 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
-| 支付宝应用授权小程序支付 | alipay_sub@@mini_program | 0601 |
+| 支付宝应用授权小程序支付 | alipay_sub@@mini_jsapi | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
 | 支付宝应用授权pc支付 | alipay_sub@@pc | 0603 |
 | 支付宝应用授权app支付 | alipay_sub@@app | 0604 |
-| 支付宝应用授权jsapi支付 | alipay_sub@@jsapi | 0605 |
+| 支付宝应用授权预授权支付 | alipay_sub@@pre_auth | 0605 |
+| 支付宝应用授权小程序预授权支付 | alipay_sub@@mini_auth | 0606 |
 | 支付宝直付通当面付 | alipay_zft@@face_to_face | 0700 |
-| 支付宝直付通小程序支付 | alipay_zft@@mini_program | 0701 |
+| 支付宝直付通小程序支付 | alipay_zft@@mini_jsapi | 0701 |
 | 支付宝直付通h5支付 | alipay_zft@@h5 | 0702 |
 | 支付宝直付通pc支付 | alipay_zft@@pc | 0703 |
 | 支付宝直付通app支付 | alipay_zft@@app | 0704 |
-| 支付宝直付通jsapi支付 | alipay_zft@@jsapi | 0705 |
+| 支付宝直付通H5预授权支付 | alipay_zft@@pre_auth | 0705 |
+| 支付宝直付通小程序预授权支付 | alipay_zft@@mini_auth | 0706 |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1689414490996-74ebbf1c-efc0-48a6-a026-0ef75703eb41.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1691822266311-ace86931-7fab-4a62-876d-be546140527f.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
