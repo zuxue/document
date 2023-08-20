@@ -32,6 +32,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | pre_auth | 支付宝预授权支付 |
 |  | mini_jsapi | 小程序jsapi |
 |  | mini_auth | 小程序预授权 |
+|  | agreement | 商家扣款 |
 | person | person | 个人收款码(固定金额) |
 |  | versatile | 个人收款码(通用二维码) |
 | fourth | heiyun | 第四方黑云平台 |
@@ -119,6 +120,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝app支付 | alipay@@app | 0305 |
 | 支付宝小程序预授权 | alipay@@mini_auth | 0306 |
 | 支付宝H5预授权 | alipay@@pre_auth | 0307 |
+| 支付宝商家扣款 | alipay@@agreement | 0308 |
 | 个人收款码(固定金额二维码) | person@@persons | 0400 |
 | 个人收款码(通用二维码) | person@@versatile | 0401 |
 | 第四方黑云平台 | fourth@@heiyun | 0500 |
