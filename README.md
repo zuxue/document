@@ -33,6 +33,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | mini_jsapi | 小程序jsapi |
 |  | mini_auth | 小程序预授权 |
 |  | agreement | 商家扣款 |
+|  | red_packet | UID红包 |
 | person | person | 个人收款码(固定金额) |
 |  | versatile | 个人收款码(通用二维码) |
 | fourth | heiyun | 第四方黑云平台 |
@@ -121,6 +122,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝小程序预授权 | alipay@@mini_auth | 0306 |
 | 支付宝H5预授权 | alipay@@pre_auth | 0307 |
 | 支付宝商家扣款 | alipay@@agreement | 0308 |
+| 支付宝UID红包 | alipay@@red_packet | 0309 |
 | 个人收款码(固定金额二维码) | person@@persons | 0400 |
 | 个人收款码(通用二维码) | person@@versatile | 0401 |
 | 第四方黑云平台 | fourth@@heiyun | 0500 |
@@ -194,7 +196,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝直付通H5预授权支付 | alipay_zft@@pre_auth | 0705 |
 | 支付宝直付通小程序预授权支付 | alipay_zft@@mini_auth | 0706 |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1691822266311-ace86931-7fab-4a62-876d-be546140527f.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1692701880536-ac0a8779-b54b-4a82-824d-5cdbdf7a2d9a.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
