@@ -92,11 +92,12 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | jhpay | JhPay |
 |  | tb | Tb |
 |  | yunwei | 运维 |
-| alipay_sub | h5 | 支付宝应用授权h5支付 |
-|  | pc | 支付宝应用授权pc页面支付 |
-|  | app | 支付宝应用授权app支付 |
-|  | face_to_face | 支付宝应用授权当面付 |
+| alipay_sub | face_to_face | 支付宝应用授权当面付 |
 |  | mini_jsapi | 支付宝应用授权小程序支付 |
+|  | h5 | 支付宝应用授权h5页面支付 |
+|  | pc | 支付宝应用授权pc页面支付 |
+|  | app | 支付宝应用app支付 |
+|  | pre_auth | 支付宝应用授权预授权支付 |
 | alipay_zft | h5 | 支付宝直付通商户h5支付 |
 |  | pc | 支付宝直付通商户pc页面支付 |
 |  | app | 支付宝直付通商户app支付 |
