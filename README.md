@@ -12,6 +12,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | vendor_type | string | Y | 商户类型<br />(缩写方式见下方<br />`缩写对照表`)<br />official 公众号商户<br />alipay 支付宝<br />person 个人商户<br />fourth 第四方商户<br />alipay_sub 支付宝授权商户<br />alipay_zft 支付宝直付通商户 |
 | product | string | N | 见下方 支付产品<br />(若`vendor_type`使用<br />`缩写方式`，则此参数忽略，否则必填) |
 | desc | string | N | 商品描述 |
+| 设备 | string | N | iphone &#124; android 用户设备类型 |
 | sign | string | Y | 签名 |
 
 <a name="yRJBg"></a>
