@@ -12,7 +12,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | vendor_type | string | Y | 商户类型<br />(缩写方式见下方<br />`缩写对照表`)<br />official 公众号商户<br />alipay 支付宝<br />person 个人商户<br />fourth 第四方商户<br />alipay_sub 支付宝授权商户<br />alipay_zft 支付宝直付通商户 |
 | product | string | N | 见下方 支付产品<br />(若`vendor_type`使用<br />`缩写方式`，则此参数忽略，否则必填) |
 | desc | string | N | 商品描述 |
-| devide | string | N | iphone &#124; android 用户设备类型 |
+| 设备 | string | N | iphone &#124; android 用户设备类型 |
 | sign | string | Y | 签名 |
 
 <a name="yRJBg"></a>
@@ -99,11 +99,12 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | pc | 支付宝应用授权pc页面支付 |
 |  | app | 支付宝应用app支付 |
 |  | pre_auth | 支付宝应用授权预授权支付 |
-| alipay_zft | h5 | 支付宝直付通商户h5支付 |
+| alipay_zft | face_to_face | 支付宝直付通商户当面付 |
+|  | h5 | 支付宝直付通商户h5支付 |
 |  | pc | 支付宝直付通商户pc页面支付 |
 |  | app | 支付宝直付通商户app支付 |
-|  | face_to_face | 支付宝直付通商户当面付 |
-|  | mini_jsapi | 支付宝直付通商户小程序支付 |
+|  | h5_combine | 支付宝直付通h5合单支付 |
+|  | app_combine | 支付宝直付通app合单支付 |
 
 **提示：也可以使用**`**省略支付产品**`**的写法**<br />方法：`vendor_type = 商户类型 + "@@" + 支付产品`<br />使用缩写方法传入`vendor_type` 则可不传`product`，传了也会被忽略<br />`@@和数字方式二选一即可`
 <a name="PvTs3"></a>
@@ -191,14 +192,13 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝应用授权预授权支付 | alipay_sub@@pre_auth | 0605 |
 | 支付宝应用授权小程序预授权支付 | alipay_sub@@mini_auth | 0606 |
 | 支付宝直付通当面付 | alipay_zft@@face_to_face | 0700 |
-| 支付宝直付通小程序支付 | alipay_zft@@mini_jsapi | 0701 |
-| 支付宝直付通h5支付 | alipay_zft@@h5 | 0702 |
-| 支付宝直付通pc支付 | alipay_zft@@pc | 0703 |
-| 支付宝直付通app支付 | alipay_zft@@app | 0704 |
-| 支付宝直付通H5预授权支付 | alipay_zft@@pre_auth | 0705 |
-| 支付宝直付通小程序预授权支付 | alipay_zft@@mini_auth | 0706 |
+| 支付宝直付通h5支付 | alipay_zft@@h5 | 0701 |
+| 支付宝直付通pc支付 | alipay_zft@@pc | 0702 |
+| 支付宝直付通app支付 | alipay_zft@@app | 0703 |
+| 支付宝直付通h5合单支付 | alipay_zft@@h5_combine | 0704 |
+| 支付宝直付通app合单支付 | alipay_zft@@app_combine | 0705 |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1692701880536-ac0a8779-b54b-4a82-824d-5cdbdf7a2d9a.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1701081280090-bc99fbb3-f700-428b-847f-2f7f1ad425ac.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
