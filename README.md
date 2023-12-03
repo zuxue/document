@@ -20,8 +20,9 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | **商户类型** | **支付产品** | **描述** |
 | --- | --- | --- |
 | official | jsapi | 微信jsapi 支付 |
-|  | h5 | 微信h5支付(暂未开放) |
+|  | h5 | 微信h5支付 |
 |  | native | 微信二维码支付 |
+|  | app | 微信APP支付(限IOS端) |
 | wx_special | jsapi | 微信二级商户jsapi(服务商) |
 |  | native | 微信二级商户二维码支付(服务商) |
 | alipay | h5 | 支付宝h5支付 |
@@ -114,6 +115,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 微信二维码支付 | official@@native | 0000 |
 | 微信jsapi 支付 | official@@jsapi | 0001 |
 | 微信h5支付(暂未开放) | official@@h5 | 0002 |
+| 微信APP支付(限IOS) | official@@app | 0003 |
 | 微信二级商户二维码支付 | wx_special@@native | 0100 |
 | 微信二级商户jsapi支付 | wx_special@@jsapi | 0101 |
 | 支付宝UID支付 | alipay@@uid | 0300 |
@@ -198,7 +200,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝直付通h5合单支付 | alipay_zft@@h5_combine | 0704 |
 | 支付宝直付通app合单支付 | alipay_zft@@app_combine | 0705 |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1701081280090-bc99fbb3-f700-428b-847f-2f7f1ad425ac.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1701616512346-0b38841d-1f12-484b-b92d-2910f1b64844.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
