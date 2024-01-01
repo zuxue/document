@@ -38,6 +38,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | red_packet | UID红包 |
 |  | face_auth | 支付宝当面付预授权 |
 |  | life_jsapi | 支付宝生活号JSAPI |
+|  | face_jsapi | 支付宝当面付JSAPI |
 | person | person | 个人收款码(固定金额) |
 |  | versatile | 个人收款码(通用二维码) |
 | fourth | heiyun | 第四方黑云平台 |
@@ -113,12 +114,14 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | pre_auth | 支付宝应用授权H5预授权支付 |
 |  | mini_auth | 支付宝应用授权小程序预授权支付 |
 |  | face_auth | 支付宝应用授权当面付预授权支付 |
+|  | face_jsapi | 支付宝应用授权当面付jsapi支付 |
 | alipay_zft | face_to_face | 支付宝直付通商户当面付 |
 |  | h5 | 支付宝直付通商户h5支付 |
 |  | pc | 支付宝直付通商户pc页面支付 |
 |  | app | 支付宝直付通商户app支付 |
 |  | h5_combine | 支付宝直付通h5合单支付 |
 |  | app_combine | 支付宝直付通app合单支付 |
+|  | face_jsapi | 支付宝直付通当面付JSAPI支付 |
 
 **提示：也可以使用**`**省略支付产品**`**的写法**<br />方法：`vendor_type = 商户类型 + "@@" + 支付产品`<br />使用缩写方法传入`vendor_type` 则可不传`product`，传了也会被忽略<br />`@@和数字方式二选一即可`
 <a name="PvTs3"></a>
@@ -142,7 +145,8 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝商家扣款 | alipay@@agreement | 0308 |
 | 支付宝UID红包 | alipay@@red_packet | 0309 |
 | 支付宝当面付预授权 | alipay@@face_auth | 0310 |
-| 支付宝生活和JSAPI支付 | alipay@@life_jsapi | 0311 |
+| 支付宝生活号JSAPI支付 | alipay@@life_jsapi | 0311 |
+| 支付宝当面付JSAPI支付 | alipay@@face_jsapi | 0312 |
 | 个人收款码(固定金额二维码) | person@@persons | 0400 |
 | 个人收款码(通用二维码) | person@@versatile | 0401 |
 | 第四方黑云平台 | fourth@@heiyun | 0500 |
@@ -218,12 +222,14 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝应用授权H5预授权支付 | alipay_sub@@pre_auth | 0605 |
 | 支付宝应用授权小程序预授权支付 | alipay_sub@@mini_auth | 0606 |
 | 支付宝应用授权当面付预授权支付 | alipay_sub@@face_auth | 0607 |
+| 支付宝应用授权当面付JSAPI支付 | alipay_sub@@face_jsapi | 0608 |
 | 支付宝直付通当面付 | alipay_zft@@face_to_face | 0700 |
 | 支付宝直付通h5支付 | alipay_zft@@h5 | 0701 |
 | 支付宝直付通pc支付 | alipay_zft@@pc | 0702 |
 | 支付宝直付通app支付 | alipay_zft@@app | 0703 |
 | 支付宝直付通h5合单支付 | alipay_zft@@h5_combine | 0704 |
 | 支付宝直付通app合单支付 | alipay_zft@@app_combine | 0705 |
+| 支付宝直付通当面付JSAPI支付 | alipay_zft@@face_jsapi | 0706 |
 
 ![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1701616512346-0b38841d-1f12-484b-b92d-2910f1b64844.jpeg)<br />返回数据
 ```json
