@@ -36,6 +36,8 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | mini_auth | 小程序预授权 |
 |  | agreement | 商家扣款 |
 |  | red_packet | UID红包 |
+|  | face_auth | 支付宝当面付预授权 |
+|  | life_jsapi | 支付宝生活号JSAPI |
 | person | person | 个人收款码(固定金额) |
 |  | versatile | 个人收款码(通用二维码) |
 | fourth | heiyun | 第四方黑云平台 |
@@ -94,12 +96,23 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | jhpay | JhPay |
 |  | tb | Tb |
 |  | yunwei | 运维 |
+|  | ypl | 易票联 |
+|  | yomi | 优米 |
+|  | gate | GATE |
+|  | joint | 联调 |
+|  | tiantian | 天天 |
+|  | book | BOOK |
+|  | gatepay | gatepay |
+|  | jiafubao | 加付宝 |
+|  | wujin | 五金 |
 | alipay_sub | face_to_face | 支付宝应用授权当面付 |
 |  | mini_jsapi | 支付宝应用授权小程序支付 |
 |  | h5 | 支付宝应用授权h5页面支付 |
 |  | pc | 支付宝应用授权pc页面支付 |
-|  | app | 支付宝应用app支付 |
-|  | pre_auth | 支付宝应用授权预授权支付 |
+|  | app | 支付宝应用授权app支付 |
+|  | pre_auth | 支付宝应用授权H5预授权支付 |
+|  | mini_auth | 支付宝应用授权小程序预授权支付 |
+|  | face_auth | 支付宝应用授权当面付预授权支付 |
 | alipay_zft | face_to_face | 支付宝直付通商户当面付 |
 |  | h5 | 支付宝直付通商户h5支付 |
 |  | pc | 支付宝直付通商户pc页面支付 |
@@ -128,6 +141,8 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝H5预授权 | alipay@@pre_auth | 0307 |
 | 支付宝商家扣款 | alipay@@agreement | 0308 |
 | 支付宝UID红包 | alipay@@red_packet | 0309 |
+| 支付宝当面付预授权 | alipay@@face_auth | 0310 |
+| 支付宝生活和JSAPI支付 | alipay@@life_jsapi | 0311 |
 | 个人收款码(固定金额二维码) | person@@persons | 0400 |
 | 个人收款码(通用二维码) | person@@versatile | 0401 |
 | 第四方黑云平台 | fourth@@heiyun | 0500 |
@@ -186,13 +201,23 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | JhPay | fourth@@jhpay | 0553 |
 | Tb | fourth@@tb | 0554 |
 | 运维 | fourth@@yunwei | 0555 |
+| 易票联 | fourth@@ypl | 0556 |
+| 优米 | fourth@@yomi | 0557 |
+| GATE | fourth@@gate | 0558 |
+| 联调 | fourth@@joint | 0559 |
+| 天天 | fourth@@tiantian | 0563 |
+| BOOK | fourth@@book | 0564 |
+| gatepay | fourth@@gatepay | 0565 |
+| 加付宝 | fourth@@jiafubao | 0566 |
+| 五金 | fourth@@wujin | 0567 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_jsapi | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
 | 支付宝应用授权pc支付 | alipay_sub@@pc | 0603 |
 | 支付宝应用授权app支付 | alipay_sub@@app | 0604 |
-| 支付宝应用授权预授权支付 | alipay_sub@@pre_auth | 0605 |
+| 支付宝应用授权H5预授权支付 | alipay_sub@@pre_auth | 0605 |
 | 支付宝应用授权小程序预授权支付 | alipay_sub@@mini_auth | 0606 |
+| 支付宝应用授权当面付预授权支付 | alipay_sub@@face_auth | 0607 |
 | 支付宝直付通当面付 | alipay_zft@@face_to_face | 0700 |
 | 支付宝直付通h5支付 | alipay_zft@@h5 | 0701 |
 | 支付宝直付通pc支付 | alipay_zft@@pc | 0702 |
