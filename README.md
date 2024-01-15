@@ -122,10 +122,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | h5_combine | 支付宝直付通h5合单支付 |
 |  | app_combine | 支付宝直付通app合单支付 |
 |  | face_jsapi | 支付宝直付通当面付JSAPI支付 |
-<<<<<<< HEAD
 |  | red_packet | 支付宝现金红包 |
-=======
->>>>>>> 3ce0cdbd32c35c890d3e6ab9adbad25f9e5d7c5b
 
 **提示：也可以使用**`**省略支付产品**`**的写法**<br />方法：`vendor_type = 商户类型 + "@@" + 支付产品`<br />使用缩写方法传入`vendor_type` 则可不传`product`，传了也会被忽略<br />`@@和数字方式二选一即可`
 <a name="PvTs3"></a>
@@ -234,14 +231,9 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝直付通h5合单支付 | alipay_zft@@h5_combine | 0704 |
 | 支付宝直付通app合单支付 | alipay_zft@@app_combine | 0705 |
 | 支付宝直付通当面付JSAPI支付 | alipay_zft@@face_jsapi | 0706 |
-<<<<<<< HEAD
 | 支付宝现金红包 | alipay_zft@@red_packet | 0707 |
 
 ![](https://cdn.nlark.com/yuque/0/2024/jpeg/1108504/1705332273579-7210980a-e8c7-49c7-9b0c-787f8cbc4eff.jpeg)<br />返回数据
-=======
-
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1701616512346-0b38841d-1f12-484b-b92d-2910f1b64844.jpeg)<br />返回数据
->>>>>>> 3ce0cdbd32c35c890d3e6ab9adbad25f9e5d7c5b
 ```json
 {
     "status": "success",
