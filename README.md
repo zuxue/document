@@ -12,6 +12,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | vendor_type | string | Y | 商户类型<br />(缩写方式见下方<br />`缩写对照表`)<br />official 公众号商户<br />alipay 支付宝<br />person 个人商户<br />fourth 第四方商户<br />alipay_sub 支付宝授权商户<br />alipay_zft 支付宝直付通商户 |
 | product | string | N | 见下方 支付产品<br />(若`vendor_type`使用<br />`缩写方式`，则此参数忽略，否则必填) |
 | desc | string | N | 商品描述 |
+| devide | string | N | iphone &#124; android 用户设备类型 |
 | sign | string | Y | 签名 |
 
 <a name="yRJBg"></a>
@@ -19,8 +20,9 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | **商户类型** | **支付产品** | **描述** |
 | --- | --- | --- |
 | official | jsapi | 微信jsapi 支付 |
-|  | h5 | 微信h5支付(暂未开放) |
+|  | h5 | 微信h5支付 |
 |  | native | 微信二维码支付 |
+|  | app | 微信APP支付(限IOS端) |
 | wx_special | jsapi | 微信二级商户jsapi(服务商) |
 |  | native | 微信二级商户二维码支付(服务商) |
 | alipay | h5 | 支付宝h5支付 |
@@ -34,6 +36,9 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | mini_auth | 小程序预授权 |
 |  | agreement | 商家扣款 |
 |  | red_packet | UID红包 |
+|  | face_auth | 支付宝当面付预授权 |
+|  | life_jsapi | 支付宝生活号JSAPI |
+|  | face_jsapi | 支付宝当面付JSAPI |
 | person | person | 个人收款码(固定金额) |
 |  | versatile | 个人收款码(通用二维码) |
 | fourth | heiyun | 第四方黑云平台 |
@@ -92,17 +97,32 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | jhpay | JhPay |
 |  | tb | Tb |
 |  | yunwei | 运维 |
+|  | ypl | 易票联 |
+|  | yomi | 优米 |
+|  | gate | GATE |
+|  | joint | 联调 |
+|  | tiantian | 天天 |
+|  | book | BOOK |
+|  | gatepay | gatepay |
+|  | jiafubao | 加付宝 |
+|  | wujin | 五金 |
 | alipay_sub | face_to_face | 支付宝应用授权当面付 |
 |  | mini_jsapi | 支付宝应用授权小程序支付 |
 |  | h5 | 支付宝应用授权h5页面支付 |
 |  | pc | 支付宝应用授权pc页面支付 |
-|  | app | 支付宝应用app支付 |
-|  | pre_auth | 支付宝应用授权预授权支付 |
-| alipay_zft | h5 | 支付宝直付通商户h5支付 |
+|  | app | 支付宝应用授权app支付 |
+|  | pre_auth | 支付宝应用授权H5预授权支付 |
+|  | mini_auth | 支付宝应用授权小程序预授权支付 |
+|  | face_auth | 支付宝应用授权当面付预授权支付 |
+|  | face_jsapi | 支付宝应用授权当面付jsapi支付 |
+| alipay_zft | face_to_face | 支付宝直付通商户当面付 |
+|  | h5 | 支付宝直付通商户h5支付 |
 |  | pc | 支付宝直付通商户pc页面支付 |
 |  | app | 支付宝直付通商户app支付 |
-|  | face_to_face | 支付宝直付通商户当面付 |
-|  | mini_jsapi | 支付宝直付通商户小程序支付 |
+|  | h5_combine | 支付宝直付通h5合单支付 |
+|  | app_combine | 支付宝直付通app合单支付 |
+|  | face_jsapi | 支付宝直付通当面付JSAPI支付 |
+|  | red_packet | 支付宝现金红包 |
 
 **提示：也可以使用**`**省略支付产品**`**的写法**<br />方法：`vendor_type = 商户类型 + "@@" + 支付产品`<br />使用缩写方法传入`vendor_type` 则可不传`product`，传了也会被忽略<br />`@@和数字方式二选一即可`
 <a name="PvTs3"></a>
@@ -112,6 +132,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 微信二维码支付 | official@@native | 0000 |
 | 微信jsapi 支付 | official@@jsapi | 0001 |
 | 微信h5支付(暂未开放) | official@@h5 | 0002 |
+| 微信APP支付(限IOS) | official@@app | 0003 |
 | 微信二级商户二维码支付 | wx_special@@native | 0100 |
 | 微信二级商户jsapi支付 | wx_special@@jsapi | 0101 |
 | 支付宝UID支付 | alipay@@uid | 0300 |
@@ -124,6 +145,9 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝H5预授权 | alipay@@pre_auth | 0307 |
 | 支付宝商家扣款 | alipay@@agreement | 0308 |
 | 支付宝UID红包 | alipay@@red_packet | 0309 |
+| 支付宝当面付预授权 | alipay@@face_auth | 0310 |
+| 支付宝生活号JSAPI支付 | alipay@@life_jsapi | 0311 |
+| 支付宝当面付JSAPI支付 | alipay@@face_jsapi | 0312 |
 | 个人收款码(固定金额二维码) | person@@persons | 0400 |
 | 个人收款码(通用二维码) | person@@versatile | 0401 |
 | 第四方黑云平台 | fourth@@heiyun | 0500 |
@@ -182,22 +206,34 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | JhPay | fourth@@jhpay | 0553 |
 | Tb | fourth@@tb | 0554 |
 | 运维 | fourth@@yunwei | 0555 |
+| 易票联 | fourth@@ypl | 0556 |
+| 优米 | fourth@@yomi | 0557 |
+| GATE | fourth@@gate | 0558 |
+| 联调 | fourth@@joint | 0559 |
+| 天天 | fourth@@tiantian | 0563 |
+| BOOK | fourth@@book | 0564 |
+| gatepay | fourth@@gatepay | 0565 |
+| 加付宝 | fourth@@jiafubao | 0566 |
+| 五金 | fourth@@wujin | 0567 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_jsapi | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
 | 支付宝应用授权pc支付 | alipay_sub@@pc | 0603 |
 | 支付宝应用授权app支付 | alipay_sub@@app | 0604 |
-| 支付宝应用授权预授权支付 | alipay_sub@@pre_auth | 0605 |
+| 支付宝应用授权H5预授权支付 | alipay_sub@@pre_auth | 0605 |
 | 支付宝应用授权小程序预授权支付 | alipay_sub@@mini_auth | 0606 |
+| 支付宝应用授权当面付预授权支付 | alipay_sub@@face_auth | 0607 |
+| 支付宝应用授权当面付JSAPI支付 | alipay_sub@@face_jsapi | 0608 |
 | 支付宝直付通当面付 | alipay_zft@@face_to_face | 0700 |
-| 支付宝直付通小程序支付 | alipay_zft@@mini_jsapi | 0701 |
-| 支付宝直付通h5支付 | alipay_zft@@h5 | 0702 |
-| 支付宝直付通pc支付 | alipay_zft@@pc | 0703 |
-| 支付宝直付通app支付 | alipay_zft@@app | 0704 |
-| 支付宝直付通H5预授权支付 | alipay_zft@@pre_auth | 0705 |
-| 支付宝直付通小程序预授权支付 | alipay_zft@@mini_auth | 0706 |
+| 支付宝直付通h5支付 | alipay_zft@@h5 | 0701 |
+| 支付宝直付通pc支付 | alipay_zft@@pc | 0702 |
+| 支付宝直付通app支付 | alipay_zft@@app | 0703 |
+| 支付宝直付通h5合单支付 | alipay_zft@@h5_combine | 0704 |
+| 支付宝直付通app合单支付 | alipay_zft@@app_combine | 0705 |
+| 支付宝直付通当面付JSAPI支付 | alipay_zft@@face_jsapi | 0706 |
+| 支付宝现金红包 | alipay_zft@@red_packet | 0707 |
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/1108504/1692701880536-ac0a8779-b54b-4a82-824d-5cdbdf7a2d9a.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2024/jpeg/1108504/1705332273579-7210980a-e8c7-49c7-9b0c-787f8cbc4eff.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
