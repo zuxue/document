@@ -106,6 +106,10 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | gatepay | gatepay |
 |  | jiafubao | 加付宝 |
 |  | wujin | 五金 |
+|  | add | ADD |
+|  | quick | 快付通 |
+|  | lqd | 来钱多 |
+|  | senior | 大师姐 |
 | alipay_sub | face_to_face | 支付宝应用授权当面付 |
 |  | mini_jsapi | 支付宝应用授权小程序支付 |
 |  | h5 | 支付宝应用授权h5页面支付 |
@@ -215,6 +219,10 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | gatepay | fourth@@gatepay | 0565 |
 | 加付宝 | fourth@@jiafubao | 0566 |
 | 五金 | fourth@@wujin | 0567 |
+| ADD | fourth@@add | 0568 |
+| 快付通 | fourth@@quick | 0569 |
+| 来钱多 | fourth@@lqd | 0570 |
+| 大师姐 | fourth@@senior | 0571 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_jsapi | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
