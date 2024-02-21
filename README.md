@@ -110,6 +110,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | quick | 快付通 |
 |  | lqd | 来钱多 |
 |  | senior | 大师姐 |
+|  | jiusen | 九森 |
 | alipay_sub | face_to_face | 支付宝应用授权当面付 |
 |  | mini_jsapi | 支付宝应用授权小程序支付 |
 |  | h5 | 支付宝应用授权h5页面支付 |
@@ -223,6 +224,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 快付通 | fourth@@quick | 0569 |
 | 来钱多 | fourth@@lqd | 0570 |
 | 大师姐 | fourth@@senior | 0571 |
+| 九森 | fourth@@jiusen | 0572 |
 | 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
 | 支付宝应用授权小程序支付 | alipay_sub@@mini_jsapi | 0601 |
 | 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
@@ -241,7 +243,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝直付通当面付JSAPI支付 | alipay_zft@@face_jsapi | 0706 |
 | 支付宝现金红包 | alipay_zft@@red_packet | 0707 |
 
-![](https://cdn.nlark.com/yuque/0/2024/jpeg/1108504/1705332273579-7210980a-e8c7-49c7-9b0c-787f8cbc4eff.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2024/jpeg/1108504/1708523971512-e71cb273-7715-459d-a564-f639116d551b.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
