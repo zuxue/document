@@ -39,6 +39,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 |  | face_auth | 支付宝当面付预授权 |
 |  | life_jsapi | 支付宝生活号JSAPI |
 |  | face_jsapi | 支付宝当面付JSAPI |
+|  | face_to_h5 | 当面付转手机网站 |
 | person | person | 个人收款码(固定金额) |
 |  | versatile | 个人收款码(通用二维码) |
 | fourth | heiyun | 第四方黑云平台 |
@@ -153,6 +154,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝当面付预授权 | alipay@@face_auth | 0310 |
 | 支付宝生活号JSAPI支付 | alipay@@life_jsapi | 0311 |
 | 支付宝当面付JSAPI支付 | alipay@@face_jsapi | 0312 |
+| 支付宝当面付转手机网站支付 | alipay@@face_to_h5 | 0313 |
 | 个人收款码(固定金额二维码) | person@@persons | 0400 |
 | 个人收款码(通用二维码) | person@@versatile | 0401 |
 | 第四方黑云平台 | fourth@@heiyun | 0500 |
@@ -243,7 +245,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝直付通当面付JSAPI支付 | alipay_zft@@face_jsapi | 0706 |
 | 支付宝现金红包 | alipay_zft@@red_packet | 0707 |
 
-![](https://cdn.nlark.com/yuque/0/2024/jpeg/1108504/1708523971512-e71cb273-7715-459d-a564-f639116d551b.jpeg)<br />返回数据
+![](https://cdn.nlark.com/yuque/0/2024/jpeg/1108504/1711106531760-c74eee1f-5683-4c02-ab46-49a55fd1a587.jpeg)<br />返回数据
 ```json
 {
     "status": "success",
