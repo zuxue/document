@@ -15,122 +15,8 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | devide | string | N | iphone &#124; android 用户设备类型 |
 | sign | string | Y | 签名 |
 
-<a name="yRJBg"></a>
-#### 商户类型与产品对应关系
-| **商户类型** | **支付产品** | **描述** |
-| --- | --- | --- |
-| official | jsapi | 微信jsapi 支付 |
-|  | h5 | 微信h5支付 |
-|  | native | 微信二维码支付 |
-|  | app | 微信APP支付(限IOS端) |
-| wx_special | jsapi | 微信二级商户jsapi(服务商) |
-|  | native | 微信二级商户二维码支付(服务商) |
-| alipay | h5 | 支付宝h5支付 |
-|  | pc | 支付宝pc页面支付 |
-|  | app | 支付宝app支付 |
-|  | uid | 支付宝uid支付 |
-|  | face_to_face | 支付宝当面付 |
-|  | app | 支付宝app支付 |
-|  | pre_auth | 支付宝预授权支付 |
-|  | mini_jsapi | 小程序jsapi |
-|  | mini_auth | 小程序预授权 |
-|  | agreement | 商家扣款 |
-|  | red_packet | UID红包 |
-|  | face_auth | 支付宝当面付预授权 |
-|  | life_jsapi | 支付宝生活号JSAPI |
-|  | face_jsapi | 支付宝当面付JSAPI |
-|  | face_to_h5 | 当面付转手机网站 |
-| person | person | 个人收款码(固定金额) |
-|  | versatile | 个人收款码(通用二维码) |
-| fourth | heiyun | 第四方黑云平台 |
-|  | unipay | 云闪付 |
-|  | jiutian | 九天 |
-|  | pepsi | 百事 |
-|  | sp | SP |
-|  | yiyuan | 益远微信客服Native |
-|  | xiaoyu | 小雨 |
-|  | yuan | 源支付(个码) |
-|  | spu | SPU |
-|  | jpay | JPAY |
-|  | hand | 翰银 |
-|  | plameng | 派拉蒙 |
-|  | obl | obl平台 |
-|  | pangu | 盘古 |
-|  | jiuxiao | 九霄 |
-|  | yi | 艺支付 |
-|  | huifu | 汇付 |
-|  | kuai | 快付 |
-|  | orange | 橙子 |
-|  | zhifu | 智付 |
-|  | dadi | 大地 |
-|  | dashun | 大顺 |
-|  | wx_receipt | 微信收款单 |
-|  | cool | COOL-PAY |
-|  | linyun | 林云 |
-|  | qilin | 麒麟 |
-|  | xx | XX支付 |
-|  | shenzhou | 神州 |
-|  | newlife | 新生 |
-|  | hftx | 汇付天下 |
-|  | alain | ALAIN |
-|  | luyifa | 路易发 |
-|  | innovate | 创新 |
-|  | shenming | 神明 |
-|  | adapay | AdaPay |
-|  | mingzhi | 明智支付 |
-|  | lianbang | 连邦 |
-|  | sand | 杉德 |
-|  | gopay | GoPay |
-|  | webpay | 微宝付 |
-|  | bigbirld | 大鸟 |
-|  | yongsheng | 永盛 |
-|  | cpay | CPAY |
-|  | zhuque | 朱雀 |
-|  | flylong | 飞龙 |
-|  | yinglian | 盈联 |
-|  | aspx | Aspx |
-|  | nihao | NihaoPay |
-|  | qidian | 起点 |
-|  | shun | 顺 |
-|  | unknown | 无名 |
-|  | lakala | 拉卡拉 |
-|  | lei | 雷支付 |
-|  | jhpay | JhPay |
-|  | tb | Tb |
-|  | yunwei | 运维 |
-|  | ypl | 易票联 |
-|  | yomi | 优米 |
-|  | gate | GATE |
-|  | joint | 联调 |
-|  | tiantian | 天天 |
-|  | book | BOOK |
-|  | gatepay | gatepay |
-|  | jiafubao | 加付宝 |
-|  | wujin | 五金 |
-|  | add | ADD |
-|  | quick | 快付通 |
-|  | lqd | 来钱多 |
-|  | senior | 大师姐 |
-|  | jiusen | 九森 |
-| alipay_sub | face_to_face | 支付宝应用授权当面付 |
-|  | mini_jsapi | 支付宝应用授权小程序支付 |
-|  | h5 | 支付宝应用授权h5页面支付 |
-|  | pc | 支付宝应用授权pc页面支付 |
-|  | app | 支付宝应用授权app支付 |
-|  | pre_auth | 支付宝应用授权H5预授权支付 |
-|  | mini_auth | 支付宝应用授权小程序预授权支付 |
-|  | face_auth | 支付宝应用授权当面付预授权支付 |
-|  | face_jsapi | 支付宝应用授权当面付jsapi支付 |
-| alipay_zft | face_to_face | 支付宝直付通商户当面付 |
-|  | h5 | 支付宝直付通商户h5支付 |
-|  | pc | 支付宝直付通商户pc页面支付 |
-|  | app | 支付宝直付通商户app支付 |
-|  | h5_combine | 支付宝直付通h5合单支付 |
-|  | app_combine | 支付宝直付通app合单支付 |
-|  | face_jsapi | 支付宝直付通当面付JSAPI支付 |
-|  | red_packet | 支付宝现金红包 |
 
-**提示：也可以使用**`**省略支付产品**`**的写法**<br />方法：`vendor_type = 商户类型 + "@@" + 支付产品`<br />使用缩写方法传入`vendor_type` 则可不传`product`，传了也会被忽略<br />`@@和数字方式二选一即可`
+**提示：使用**`**省略支付产品**`**的写法**<br />方法：`vendor_type = 商户类型 + "@@" + 支付产品`<br />使用缩写方法传入`vendor_type` 则可`不传``product`，传了也会被忽略<br />`@@和数字方式二选一即可`
 <a name="PvTs3"></a>
 #### 缩写对照表
 | **支付产品** | **简写方式1(**`**vendor_type**`**)** | **简写方式2(**`**vendor_type**`**)** |
@@ -155,6 +41,7 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | 支付宝生活号JSAPI支付 | alipay@@life_jsapi | 0311 |
 | 支付宝当面付JSAPI支付 | alipay@@face_jsapi | 0312 |
 | 支付宝当面付转手机网站支付 | alipay@@face_to_h5 | 0313 |
+| 支付宝订单码支付 | alipay@@qr_code | 0314 |
 | 个人收款码(固定金额二维码) | person@@persons | 0400 |
 | 个人收款码(通用二维码) | person@@versatile | 0401 |
 | 第四方黑云平台 | fourth@@heiyun | 0500 |
