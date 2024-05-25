@@ -1,4 +1,4 @@
-为了更好的兼容性，本平台支持两种下单模式，`正常下单`与`仿易支付下单`
+为了更好的兼容性，本平台支持两种下单模式，`正常下单`与`仿易支付下单`<br />使用不同的下单方式需要使用`相对应的加签方式`，具体签名方式见`文档底部`
 <a name="HT8d0"></a>
 ### 正常下单
 POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-www-form-urlencoded;charset=utf-8`<br />请求参数
@@ -225,7 +225,7 @@ POST<br />`domain + /api/order/trade/query`<br />`Content-Type: application/x-ww
 | sign | string | Y | 签名 |
 
 <a name="Ix2gq"></a>
-### 签名方法
+### 正常下单签名方法
 
 1. 将参数名按ASCLL字典序顺序排序
 2. 将参数按照key=>value键值对的形式拼接，形成一个字符串 类似 { a=b&b=c&c=d }
@@ -254,6 +254,35 @@ protected static function makeSign(array $arr, string $cert): string
     $str = urldecode($str) . '&cert=' . $cert;
     $str = md5($str);
     return  strtoupper($str);
+}
+```
+<a name="j90qf"></a>
+### 仿易支付签名方法
+
+1. 将参数名按ASCLL字典序顺序排序
+2. 将参数按照key=>value键值对的形式拼接，形成一个字符串 类似 { a=b&b=c&c=d }
+3. 在字符串末尾拼接{ cert } cert 为每个用户的 密钥
+4. 将最终生成的字符串进行md5加密 得到一个32位字符串
+<a name="VjcOO"></a>
+#### php示例代码
+```php
+/**
+  * 仿易支付签名
+  * @param array $arr  参与签名的数组
+  * @param string $cert 用户密钥
+  */
+protected static function likeYiMakeSign($arr, $cert)
+{
+    ksort($arr);
+    reset($arr);
+    $fieldstring = array();
+    foreach ($arr as $key => $value) {
+        if (!empty($value)) {
+            $fieldstring[] =  $key . "=" . $value;
+        }
+    }
+    $fieldstring = implode("&", $fieldstring);
+    return md5($fieldstring . $cert);
 }
 ```
 <a name="cN5a2"></a>
