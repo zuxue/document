@@ -1,5 +1,6 @@
+为了更好的兼容性，本平台支持两种下单模式，`正常下单`与`仿易支付下单`
 <a name="HT8d0"></a>
-### 下单
+### 正常下单
 POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-www-form-urlencoded;charset=utf-8`<br />请求参数
 
 | **参数名** | **参数类型** | **是否必填** | **示例、说明** |
@@ -10,11 +11,26 @@ POST<br />`domain + /collection/place/create`<br />`Content-Type: application/x-
 | jump_url | string | Y | 订单完成跳转url |
 | notice_url | string | Y | 订单完成异步通知url |
 | vendor_type | string | Y | 商户类型<br />(缩写方式见下方<br />`缩写对照表`)<br />official 公众号商户<br />alipay 支付宝<br />person 个人商户<br />fourth 第四方商户<br />alipay_sub 支付宝授权商户<br />alipay_zft 支付宝直付通商户 |
-| product | string | N | 见下方 支付产品<br />(若`vendor_type`使用<br />`缩写方式`，则此参数忽略，否则必填) |
+| product | string | N | 见下方 支付产品<br />(若`vendor_type`使用`缩写方式`，则此参数忽略，否则必填) |
 | desc | string | N | 商品描述 |
 | devide | string | N | iphone &#124; android 用户设备类型 |
 | sign | string | Y | 签名 |
 
+<a name="tBbFo"></a>
+### 仿易支付下单(使用form表单提交)
+POST<br />`domain + /submit`<br />`Content-Type: application/x-www-form-urlencoded`<br />请求参数<br />`仅下表中的参数参与签名，其余参数均不参与签名`
+
+| **参数名** | **参数类型** | **是否必填** | **示例、说明** |
+| --- | --- | --- | --- |
+| pid | string | Y | 用户唯一标识 |
+| out_trade_no | string | Y | 订单号 |
+| money | float | Y | 金额(单位:元) |
+| return_url | string | N | 订单完成跳转url |
+| notify_url | string | Y | 订单完成异步通知url |
+| type | string | Y | 商户类型<br />(见下方`缩写对照表`) |
+| name | string | N | 商品描述 |
+| ip | string | N | IP |
+| sign | string | Y | 签名 |
 
 **提示：使用**`**省略支付产品**`**的写法**<br />方法：`vendor_type = 商户类型 + "@@" + 支付产品`<br />使用缩写方法传入`vendor_type` 则可`不传``product`，传了也会被忽略<br />`@@和数字方式二选一即可`
 <a name="PvTs3"></a>
