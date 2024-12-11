@@ -1,8 +1,8 @@
-为了更好的兼容性，本平台支持两种下单模式，`<font style="color:#74B602;">正常下单</font>`与`<font style="color:#117CEE;">仿易支付下单</font>`
+为了更好的兼容性，本平台支持两种下单模式，`正常下单`与`仿易支付下单`
 
-使用不同的下单方式需要使用`<font style="color:#DF2A3F;">相对应的加签方式</font>`，具体签名方式见`<font style="color:#DF2A3F;">文档底部</font>`
+使用不同的下单方式需要使用`相对应的加签方式`，具体签名方式见`文档底部`
 
-<h3 id="HT8d0"><font style="color:#74B602;">正常下单</font></h3>
+<h3 id="HT8d0">正常下单</h3>
 POST
 
 `domain + /collection/place/create`
@@ -18,14 +18,14 @@ POST
 | fee | int | Y | 金额(单位:分)<br/>当商户类型为person时需要能被100整除，即为正整数的**元 |
 | jump_url | string | Y | 订单完成跳转url |
 | notice_url | string | Y | 订单完成异步通知url |
-| vendor_type | string | Y | 商户类型<br/>(缩写方式见下方<br/>`<font style="color:#FFFFFF;background-color:#DF2A3F;">缩写对照表</font>`)<br/>official 公众号商户<br/>alipay 支付宝<br/>person 个人商户<br/>fourth 第四方商户<br/>alipay_sub 支付宝授权商户<br/>alipay_zft 支付宝直付通商户 |
-| product | string | N | 见下方 支付产品<br/>(若`<font style="color:#FFFFFF;background-color:#DF2A3F;">vendor_type</font>`使用`<font style="color:#FFFFFF;background-color:#DF2A3F;">缩写方式</font>`，则此参数忽略，否则必填) |
+| vendor_type | string | Y | 商户类型<br/>(缩写方式见下方<br/>`缩写对照表`)<br/>official 公众号商户<br/>alipay 支付宝<br/>person 个人商户<br/>fourth 第四方商户<br/>alipay_sub 支付宝授权商户<br/>alipay_zft 支付宝直付通商户 |
+| product | string | N | 见下方 支付产品<br/>(若`vendor_type`使用`缩写方式`，则此参数忽略，否则必填) |
 | desc | string | N | 商品描述 |
 | devide | string | N | iphone | android 用户设备类型 |
 | sign | string | Y | 签名 |
 
 
-<h3 id="tBbFo"><font style="color:#117CEE;">仿易支付下单(使用form表单提交)</font></h3>
+<h3 id="tBbFo">仿易支付下单(使用form表单提交)</h3>
 POST
 
 `domain + /submit`
@@ -34,7 +34,7 @@ POST
 
 请求参数
 
-`仅下表中的参数参与签名，其余参数均<font style="color:#DF2A3F;">不</font>参与签名`
+`仅下表中的参数参与签名，其余参数均不参与签名`
 
 | **参数名** | **参数类型** | **是否必填** | **示例、说明** |
 | --- | --- | --- | --- |
@@ -43,134 +43,134 @@ POST
 | money | float | Y | 金额(单位:元) |
 | return_url | string | N | 订单完成跳转url |
 | notify_url | string | Y | 订单完成异步通知url |
-| type | string | Y | 商户类型<br/>(见下方`<font style="color:#FFFFFF;background-color:#DF2A3F;">缩写对照表</font>`) |
+| type | string | Y | 商户类型<br/>(见下方`缩写对照表`) |
 | name | string | N | 商品描述 |
 | ip | string | N | IP |
 | sign | string | Y | 签名 |
 
 
-**<font style="color:#DF2A3F;">提示：使用</font>**`**<font style="color:#DF2A3F;">省略支付产品</font>**`**<font style="color:#DF2A3F;">的写法</font>**
+**提示：使用**`**省略支付产品**`**的写法**
 
 方法：`vendor_type = 商户类型 + "@@" + 支付产品`
 
-使用缩写方法传入`vendor_type` 则可`<font style="color:#DF2A3F;">不传</font>``product`，传了也会被忽略
+使用缩写方法传入`vendor_type` 则可`不传``product`，传了也会被忽略
 
-`@@和数字方式<font style="color:#DF2A3F;">二选一</font>即可`
+`@@和数字方式二选一即可`
 
 <h4 id="PvTs3">缩写对照表</h4>
 | **支付产品** | **简写方式1(**`**vendor_type**`**)** | **简写方式2(**`**vendor_type**`**)** |
 | --- | --- | --- |
-| <font style="color:#FFFFFF;">微信二维码支付</font> | official@@native | 0000 |
-| <font style="color:#FFFFFF;">微信jsapi 支付</font> | official@@jsapi | 0001 |
-| <font style="color:#FFFFFF;">微信h5支付(暂未开放)</font> | official@@h5 | 0002 |
-| <font style="color:#FFFFFF;">微信APP支付(限IOS)</font> | official@@app | 0003 |
-| <font style="color:#FFFFFF;">微信二级商户二维码支付</font> | wx_special@@native | 0100 |
-| <font style="color:#FFFFFF;">微信二级商户jsapi支付</font> | wx_special@@jsapi | 0101 |
-| <font style="color:#FFFFFF;">支付宝UID支付</font> | alipay@@uid | 0300 |
-| <font style="color:#FFFFFF;">支付宝当面付</font> | alipay@@face_to_face | 0301 |
-| <font style="color:#FFFFFF;">支付宝小程序JSAPI支付</font> | alipay@@mini_jsapi | 0302 |
-| <font style="color:#FFFFFF;">支付宝h5支付</font> | alipay@@h5 | 0303 |
-| <font style="color:#FFFFFF;">支付宝pc支付</font> | alipay@@pc | 0304 |
-| <font style="color:#FFFFFF;">支付宝app支付</font> | alipay@@app | 0305 |
-| <font style="color:#FFFFFF;">支付宝小程序预授权</font> | alipay@@mini_auth | 0306 |
-| <font style="color:#FFFFFF;">支付宝H5预授权</font> | alipay@@pre_auth | 0307 |
-| <font style="color:#FFFFFF;">支付宝商家扣款</font> | alipay@@agreement | 0308 |
-| <font style="color:#FFFFFF;">支付宝UID红包</font> | alipay@@red_packet | 0309 |
-| <font style="color:#FFFFFF;">支付宝当面付预授权</font> | alipay@@face_auth | 0310 |
-| <font style="color:#FFFFFF;">支付宝生活号JSAPI支付</font> | alipay@@life_jsapi | 0311 |
-| <font style="color:#FFFFFF;">支付宝当面付JSAPI支付</font> | alipay@@face_jsapi | 0312 |
-| <font style="color:#FFFFFF;">支付宝当面付转手机网站支付</font> | alipay@@face_to_h5 | 0313 |
-| <font style="color:#FFFFFF;">支付宝订单码支付</font> | alipay@@qr_code | 0314 |
-| <font style="color:#FFFFFF;">新版手机网站</font> | alipay@@h5_to_h5 | 0315 |
-| <font style="color:#FFFFFF;">个人收款码(固定金额二维码)</font> | person@@persons | 0400 |
-| <font style="color:#FFFFFF;">个人收款码(通用二维码)</font> | person@@versatile | 0401 |
-| <font style="color:#FFFFFF;">第四方黑云平台</font> | fourth@@heiyun | 0500 |
-| <font style="color:#FFFFFF;">九天</font> | fourth@@jiutian | 0501 |
-| <font style="color:#FFFFFF;">百事</font> | fourth@@pepsi | 0502 |
-| <font style="color:#FFFFFF;">SP</font> | fourth@@sp | 0503 |
-| <font style="color:#FFFFFF;">益远微信客服Native</font> | fourth@@yiyuan | 0504 |
-| <font style="color:#FFFFFF;">小雨</font> | fourth@@xiaoyu | 0505 |
-| <font style="color:#FFFFFF;">源支付</font> | fourth@@yuan | 0506 |
-| <font style="color:#FFFFFF;">JPAY</font> | fourth@@jpay | 0507 |
-| <font style="color:#FFFFFF;">SPU</font> | fourth@@spu | 0508 |
-| <font style="color:#FFFFFF;">云闪付</font> | fourth@@unipay | 0509 |
-| <font style="color:#FFFFFF;">翰银</font> | fourth@@hand | 0510 |
-| <font style="color:#FFFFFF;">派拉蒙</font> | fourth@@plameng | 0511 |
-| <font style="color:#FFFFFF;">obl平台</font> | fourth@@obl | 0512 |
-| <font style="color:#FFFFFF;">盘古</font> | fourth@@pangu | 0513 |
-| <font style="color:#FFFFFF;">九霄</font> | fourth@@jiuxiao | 0514 |
-| <font style="color:#FFFFFF;">艺支付</font> | fourth@@yi | 0515 |
-| <font style="color:#FFFFFF;">汇付</font> | fourth@@huifu | 0516 |
-| <font style="color:#FFFFFF;">快付</font> | fourth@@kuai | 0517 |
-| <font style="color:#FFFFFF;">橙子</font> | fourth@@orange | 0518 |
-| <font style="color:#FFFFFF;">智付</font> | fourth@@zhifu | 0519 |
-| <font style="color:#FFFFFF;">大地</font> | fourth@@dadi | 0520 |
-| <font style="color:#FFFFFF;">大顺</font> | fourth@@dashun | 0521 |
-| <font style="color:#FFFFFF;">微信收款单</font> | fourth@@wx_receipt | 0522 |
-| <font style="color:#FFFFFF;">COOL-PAY</font> | fourth@@cool | 0523 |
-| <font style="color:#FFFFFF;">林云</font> | fourth@@linyun | 0524 |
-| <font style="color:#FFFFFF;">麒麟</font> | fourth@@qilin | 0525 |
-| <font style="color:#FFFFFF;">XX支付</font> | fourth@@xx | 0526 |
-| <font style="color:#FFFFFF;">神州</font> | fourth@@shenzhou | 0527 |
-| <font style="color:#FFFFFF;">新生</font> | fourth@@newlife | 0528 |
-| <font style="color:#FFFFFF;">汇付天下</font> | fourth@@hftx | 0529 |
-| <font style="color:#FFFFFF;">ALAIN</font> | fourth@@alain | 0530 |
-| <font style="color:#FFFFFF;">路易发</font> | fourth@@luyifa | 0531 |
-| <font style="color:#FFFFFF;">创新</font> | fourth@@innovate | 0532 |
-| <font style="color:#FFFFFF;">神明</font> | fourth@@shenming | 0533 |
-| <font style="color:#FFFFFF;">AdaPay</font> | fourth@@adapay | 0534 |
-| <font style="color:#FFFFFF;">明智</font> | fourth@@mingzhi | 0535 |
-| <font style="color:#FFFFFF;">连邦</font> | fourth@@lianbang | 0536 |
-| <font style="color:#FFFFFF;">杉德</font> | fourth@@sand | 0537 |
-| <font style="color:#FFFFFF;">GoPay</font> | fourth@@gopay | 0538 |
-| <font style="color:#FFFFFF;">微宝付</font> | fourth@@webpay | 0539 |
-| <font style="color:#FFFFFF;">大鸟</font> | fourth@@bigbirld | 0540 |
-| <font style="color:#FFFFFF;">永盛</font> | fourth@@yongsheng | 0541 |
-| <font style="color:#FFFFFF;">CPAY</font> | fourth@@cpay | 0542 |
-| <font style="color:#FFFFFF;">朱雀</font> | fourth@@zhuque | 0543 |
-| <font style="color:#FFFFFF;">飞龙</font> | fourth@@flylong | 0544 |
-| <font style="color:#FFFFFF;">盈联</font> | fourth@@yinglian | 0545 |
-| <font style="color:#FFFFFF;">Aspx</font> | fourth@@aspx | 0546 |
-| <font style="color:#FFFFFF;">NihaoPay</font> | fourth@@nihao | 0547 |
-| <font style="color:#FFFFFF;">起点</font> | fourth@@qidian | 0548 |
-| <font style="color:#FFFFFF;">顺</font> | fourth@@shun | 0549 |
-| <font style="color:#FFFFFF;">无名</font> | fourth@@unknown | 0550 |
-| <font style="color:#FFFFFF;">拉卡拉</font> | fourth@@lakala | 0551 |
-| <font style="color:#FFFFFF;">雷支付</font> | fourth@@lei | 0552 |
-| <font style="color:#FFFFFF;">JhPay</font> | fourth@@jhpay | 0553 |
-| <font style="color:#FFFFFF;">Tb</font> | fourth@@tb | 0554 |
-| <font style="color:#FFFFFF;">运维</font> | fourth@@yunwei | 0555 |
-| <font style="color:#FFFFFF;">易票联</font> | fourth@@ypl | 0556 |
-| <font style="color:#FFFFFF;">优米</font> | fourth@@yomi | 0557 |
-| <font style="color:#FFFFFF;">GATE</font> | fourth@@gate | 0558 |
-| <font style="color:#FFFFFF;">联调</font> | fourth@@joint | 0559 |
-| <font style="color:#FFFFFF;">天天</font> | fourth@@tiantian | 0563 |
-| <font style="color:#FFFFFF;">BOOK</font> | fourth@@book | 0564 |
-| <font style="color:#FFFFFF;">gatepay</font> | fourth@@gatepay | 0565 |
-| <font style="color:#FFFFFF;">加付宝</font> | fourth@@jiafubao | 0566 |
-| <font style="color:#FFFFFF;">五金</font> | fourth@@wujin | 0567 |
-| <font style="color:#FFFFFF;">ADD</font> | fourth@@add | 0568 |
-| <font style="color:#FFFFFF;">快付通</font> | fourth@@quick | 0569 |
-| <font style="color:#FFFFFF;">来钱多</font> | fourth@@lqd | 0570 |
-| <font style="color:#FFFFFF;">大师姐</font> | fourth@@senior | 0571 |
-| <font style="color:#FFFFFF;">九森</font> | fourth@@jiusen | 0572 |
-| <font style="color:#FFFFFF;">支付宝应用授权当面付</font> | alipay_sub@@face_to_face | 0600 |
-| <font style="color:#FFFFFF;">支付宝应用授权小程序支付</font> | alipay_sub@@mini_jsapi | 0601 |
-| <font style="color:#FFFFFF;">支付宝应用授权h5支付</font> | alipay_sub@@h5 | 0602 |
-| <font style="color:#FFFFFF;">支付宝应用授权pc支付</font> | alipay_sub@@pc | 0603 |
-| <font style="color:#FFFFFF;">支付宝应用授权app支付</font> | alipay_sub@@app | 0604 |
-| <font style="color:#FFFFFF;">支付宝应用授权H5预授权支付</font> | alipay_sub@@pre_auth | 0605 |
-| <font style="color:#FFFFFF;">支付宝应用授权小程序预授权支付</font> | alipay_sub@@mini_auth | 0606 |
-| <font style="color:#FFFFFF;">支付宝应用授权当面付预授权支付</font> | alipay_sub@@face_auth | 0607 |
-| <font style="color:#FFFFFF;">支付宝应用授权当面付JSAPI支付</font> | alipay_sub@@face_jsapi | 0608 |
-| <font style="color:#FFFFFF;">支付宝直付通当面付</font> | alipay_zft@@face_to_face | 0700 |
-| <font style="color:#FFFFFF;">支付宝直付通h5支付</font> | alipay_zft@@h5 | 0701 |
-| <font style="color:#FFFFFF;">支付宝直付通pc支付</font> | alipay_zft@@pc | 0702 |
-| <font style="color:#FFFFFF;">支付宝直付通app支付</font> | alipay_zft@@app | 0703 |
-| <font style="color:#FFFFFF;">支付宝直付通h5合单支付</font> | alipay_zft@@h5_combine | 0704 |
-| <font style="color:#FFFFFF;">支付宝直付通app合单支付</font> | alipay_zft@@app_combine | 0705 |
-| <font style="color:#FFFFFF;">支付宝直付通当面付JSAPI支付</font> | alipay_zft@@face_jsapi | 0706 |
-| <font style="color:#FFFFFF;">支付宝现金红包</font> | alipay_zft@@red_packet | 0707 |
+| 微信二维码支付 | official@@native | 0000 |
+| 微信jsapi 支付 | official@@jsapi | 0001 |
+| 微信h5支付(暂未开放) | official@@h5 | 0002 |
+| 微信APP支付(限IOS) | official@@app | 0003 |
+| 微信二级商户二维码支付 | wx_special@@native | 0100 |
+| 微信二级商户jsapi支付 | wx_special@@jsapi | 0101 |
+| 支付宝UID支付 | alipay@@uid | 0300 |
+| 支付宝当面付 | alipay@@face_to_face | 0301 |
+| 支付宝小程序JSAPI支付 | alipay@@mini_jsapi | 0302 |
+| 支付宝h5支付 | alipay@@h5 | 0303 |
+| 支付宝pc支付 | alipay@@pc | 0304 |
+| 支付宝app支付 | alipay@@app | 0305 |
+| 支付宝小程序预授权 | alipay@@mini_auth | 0306 |
+| 支付宝H5预授权 | alipay@@pre_auth | 0307 |
+| 支付宝商家扣款 | alipay@@agreement | 0308 |
+| 支付宝UID红包 | alipay@@red_packet | 0309 |
+| 支付宝当面付预授权 | alipay@@face_auth | 0310 |
+| 支付宝生活号JSAPI支付 | alipay@@life_jsapi | 0311 |
+| 支付宝当面付JSAPI支付 | alipay@@face_jsapi | 0312 |
+| 支付宝当面付转手机网站支付 | alipay@@face_to_h5 | 0313 |
+| 支付宝订单码支付 | alipay@@qr_code | 0314 |
+| 新版手机网站 | alipay@@h5_to_h5 | 0315 |
+| 个人收款码(固定金额二维码) | person@@persons | 0400 |
+| 个人收款码(通用二维码) | person@@versatile | 0401 |
+| 第四方黑云平台 | fourth@@heiyun | 0500 |
+| 九天 | fourth@@jiutian | 0501 |
+| 百事 | fourth@@pepsi | 0502 |
+| SP | fourth@@sp | 0503 |
+| 益远微信客服Native | fourth@@yiyuan | 0504 |
+| 小雨 | fourth@@xiaoyu | 0505 |
+| 源支付 | fourth@@yuan | 0506 |
+| JPAY | fourth@@jpay | 0507 |
+| SPU | fourth@@spu | 0508 |
+| 云闪付 | fourth@@unipay | 0509 |
+| 翰银 | fourth@@hand | 0510 |
+| 派拉蒙 | fourth@@plameng | 0511 |
+| obl平台 | fourth@@obl | 0512 |
+| 盘古 | fourth@@pangu | 0513 |
+| 九霄 | fourth@@jiuxiao | 0514 |
+| 艺支付 | fourth@@yi | 0515 |
+| 汇付 | fourth@@huifu | 0516 |
+| 快付 | fourth@@kuai | 0517 |
+| 橙子 | fourth@@orange | 0518 |
+| 智付 | fourth@@zhifu | 0519 |
+| 大地 | fourth@@dadi | 0520 |
+| 大顺 | fourth@@dashun | 0521 |
+| 微信收款单 | fourth@@wx_receipt | 0522 |
+| COOL-PAY | fourth@@cool | 0523 |
+| 林云 | fourth@@linyun | 0524 |
+| 麒麟 | fourth@@qilin | 0525 |
+| XX支付 | fourth@@xx | 0526 |
+| 神州 | fourth@@shenzhou | 0527 |
+| 新生 | fourth@@newlife | 0528 |
+| 汇付天下 | fourth@@hftx | 0529 |
+| ALAIN | fourth@@alain | 0530 |
+| 路易发 | fourth@@luyifa | 0531 |
+| 创新 | fourth@@innovate | 0532 |
+| 神明 | fourth@@shenming | 0533 |
+| AdaPay | fourth@@adapay | 0534 |
+| 明智 | fourth@@mingzhi | 0535 |
+| 连邦 | fourth@@lianbang | 0536 |
+| 杉德 | fourth@@sand | 0537 |
+| GoPay | fourth@@gopay | 0538 |
+| 微宝付 | fourth@@webpay | 0539 |
+| 大鸟 | fourth@@bigbirld | 0540 |
+| 永盛 | fourth@@yongsheng | 0541 |
+| CPAY | fourth@@cpay | 0542 |
+| 朱雀 | fourth@@zhuque | 0543 |
+| 飞龙 | fourth@@flylong | 0544 |
+| 盈联 | fourth@@yinglian | 0545 |
+| Aspx | fourth@@aspx | 0546 |
+| NihaoPay | fourth@@nihao | 0547 |
+| 起点 | fourth@@qidian | 0548 |
+| 顺 | fourth@@shun | 0549 |
+| 无名 | fourth@@unknown | 0550 |
+| 拉卡拉 | fourth@@lakala | 0551 |
+| 雷支付 | fourth@@lei | 0552 |
+| JhPay | fourth@@jhpay | 0553 |
+| Tb | fourth@@tb | 0554 |
+| 运维 | fourth@@yunwei | 0555 |
+| 易票联 | fourth@@ypl | 0556 |
+| 优米 | fourth@@yomi | 0557 |
+| GATE | fourth@@gate | 0558 |
+| 联调 | fourth@@joint | 0559 |
+| 天天 | fourth@@tiantian | 0563 |
+| BOOK | fourth@@book | 0564 |
+| gatepay | fourth@@gatepay | 0565 |
+| 加付宝 | fourth@@jiafubao | 0566 |
+| 五金 | fourth@@wujin | 0567 |
+| ADD | fourth@@add | 0568 |
+| 快付通 | fourth@@quick | 0569 |
+| 来钱多 | fourth@@lqd | 0570 |
+| 大师姐 | fourth@@senior | 0571 |
+| 九森 | fourth@@jiusen | 0572 |
+| 支付宝应用授权当面付 | alipay_sub@@face_to_face | 0600 |
+| 支付宝应用授权小程序支付 | alipay_sub@@mini_jsapi | 0601 |
+| 支付宝应用授权h5支付 | alipay_sub@@h5 | 0602 |
+| 支付宝应用授权pc支付 | alipay_sub@@pc | 0603 |
+| 支付宝应用授权app支付 | alipay_sub@@app | 0604 |
+| 支付宝应用授权H5预授权支付 | alipay_sub@@pre_auth | 0605 |
+| 支付宝应用授权小程序预授权支付 | alipay_sub@@mini_auth | 0606 |
+| 支付宝应用授权当面付预授权支付 | alipay_sub@@face_auth | 0607 |
+| 支付宝应用授权当面付JSAPI支付 | alipay_sub@@face_jsapi | 0608 |
+| 支付宝直付通当面付 | alipay_zft@@face_to_face | 0700 |
+| 支付宝直付通h5支付 | alipay_zft@@h5 | 0701 |
+| 支付宝直付通pc支付 | alipay_zft@@pc | 0702 |
+| 支付宝直付通app支付 | alipay_zft@@app | 0703 |
+| 支付宝直付通h5合单支付 | alipay_zft@@h5_combine | 0704 |
+| 支付宝直付通app合单支付 | alipay_zft@@app_combine | 0705 |
+| 支付宝直付通当面付JSAPI支付 | alipay_zft@@face_jsapi | 0706 |
+| 支付宝现金红包 | alipay_zft@@red_packet | 0707 |
 
 
 ![画板](https://cdn.nlark.com/yuque/0/2024/jpeg/1108504/1711106531760-c74eee1f-5683-4c02-ab46-49a55fd1a587.jpeg)
@@ -255,21 +255,21 @@ POST
 ```
 
 <h3 id="xMUbr">异步回调</h3>
-**<font style="color:rgb(51, 51, 51);">请求方式：</font>**<font style="color:rgb(51, 51, 51);">POST</font>
+**请求方式：**POST
 
 `Content-Type: application/x-www-form-urlencoded;charset=utf-8`
 
-**<font style="color:rgb(51, 51, 51);">回调URL：</font>**<font style="color:rgb(51, 51, 51);">该链接是通过基础下单接口中的请求参数“</font>notice_url<font style="color:rgb(51, 51, 51);">”来设置的，请确保回调URL是外部可正常访问的，且不能携带后缀参数，否则可能导致商户无法接收到微信的回调通知信息。回调URL示例：“http://**.**.com/**/**”</font>
+**回调URL：**该链接是通过基础下单接口中的请求参数“notice_url”来设置的，请确保回调URL是外部可正常访问的，且不能携带后缀参数，否则可能导致商户无法接收到微信的回调通知信息。回调URL示例：“http://**.**.com/**/**”
 
-**<font style="color:rgb(51, 51, 51);">通知规则</font>**
+**通知规则**
 
-<font style="color:rgb(51, 51, 51);">用户支付完成后，平台会把相关支付结果和用户信息发送给商户，商户需要接收处理该消息，并返回应答。</font>
+用户支付完成后，平台会把相关支付结果和用户信息发送给商户，商户需要接收处理该消息，并返回应答。
 
-<font style="color:rgb(51, 51, 51);">对后台通知交互时，如果收到商户的应答不符合规范或超时，平台认为通知失败，平台会通过一定的策略定期重新发起通知，尽可能提高通知的成功率，但不保证通知最终能成功。（通知频率为15s/15s/30s/3m/10m/20m/30m/30m/30m/60m/3h/3h/3h/6h/6h - 总计 24h4m）</font>
+对后台通知交互时，如果收到商户的应答不符合规范或超时，平台认为通知失败，平台会通过一定的策略定期重新发起通知，尽可能提高通知的成功率，但不保证通知最终能成功。（通知频率为15s/15s/30s/3m/10m/20m/30m/30m/30m/60m/3h/3h/3h/6h/6h - 总计 24h4m）
 
-<font style="color:rgb(51, 51, 51);">在发送通知后接收到字符串</font>`<font style="color:#DF2A3F;">SUCCESS</font>`时视为应答成功
+在发送通知后接收到字符串`SUCCESS`时视为应答成功
 
-**<font style="color:rgb(51, 51, 51);">通知报文</font>**
+**通知报文**
 
 | **参数名** | **参数类型** | **是否必填** | **示例、说明** |
 | --- | --- | --- | --- |
