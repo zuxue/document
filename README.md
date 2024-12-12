@@ -292,21 +292,23 @@ POST
 4. 将最终生成的字符串进行md5加密 得到一个32位字符串
 5. 将md5值转为大写
 
-<h4 id="zk8mG">php示例代码</h4>
+<h4 id="YOLYZ">php示例代码</h4>
+常规接入签名方法
+
 ```php
 /**
-* 签名
-* @param array $arr  参与签名的数组
-* @param string $cert 用户密钥
-* @return string
-*/
-protected static function makeSign(array $arr, string $cert): string
+ * 签名
+ * @param array $arr  参与签名的数组
+ * @param string $cert 用户密钥
+ * @return string
+ */
+private static function makeSign(array $arr, string $cert)
 {
     $arr = array_filter($arr, function ($val) {
-      	return ($val === '' || $val === null) ? false : true;
+        return ($val === '' || $val === null) ? false : true;
     });
     if (isset($arr['sign'])) {
-      	unset($arr['sign']);
+        unset($arr['sign']);
     }
     ksort($arr);
     $str = http_build_query($arr);
@@ -323,11 +325,14 @@ protected static function makeSign(array $arr, string $cert): string
 4. 将最终生成的字符串进行md5加密 得到一个32位字符串
 
 <h4 id="VjcOO">php示例代码</h4>
+仿易支付签名方法
+
 ```php
 /**
   * 仿易支付签名
   * @param array $arr  参与签名的数组
   * @param string $cert 用户密钥
+  * @return string
   */
 protected static function likeYiMakeSign($arr, $cert)
 {
