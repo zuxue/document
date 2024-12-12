@@ -349,17 +349,49 @@ protected static function likeYiMakeSign($arr, $cert)
 }
 ```
 
-<h3 id="cN5a2">错误码</h3>
-| **code** | **message** |
-| --- | --- |
-| 0 | 成功 |
-| 2000 | 下单失败 |
+<h3 id="uLuYV">成功请求响应内容</h3>
+成功请求响应
 
-
-<h3 id="uLuYV">状态码</h3>
 | **status** | **message** |
 | --- | --- |
-| success | 成功 |
-| 其他 | 失败 |
+| success | 下单成功(用于下单接口) |
+| 200 | 请求成功(其余接口) |
 
+
+```json
+{
+    "status": "success",
+    "message": "下单成功",
+    "code": 0,
+    "platform_order": "2022111549545756",
+    "outer_order": "aabbccdd",
+    "payment_url": "http://**.***.com/collection/import/person/person/2022111549545756",
+    "sign": "D0B1116E21904C69884F648C4990359C"
+}
+```
+
+```json
+{
+    "status": 200,
+    "message": "success",
+    "data": {
+        "trade_status": "FAIL",
+        "order_num": "2022111610010110",
+        "outer_order": "2022111610010110",
+        "rand_str": "aabb",
+        "sign": "CB185ADD9DA2C5ED984D98404379644C"
+    }
+}
+```
+
+<h3 id="Unr4a">错误请求响应内容</h3>
+失败请求响应
+
+```json
+{
+  "status": 400,
+  "message": "未知用户",
+  "data": []
+}
+```
 
