@@ -165,6 +165,8 @@ POST
 | 支付宝应用授权小程序预授权支付 | alipay_sub@@mini_auth | 0606 |
 | 支付宝应用授权当面付预授权支付 | alipay_sub@@face_auth | 0607 |
 | 支付宝应用授权当面付JSAPI支付 | alipay_sub@@face_jsapi | 0608 |
+| 支付宝应用授权当面付转H5 | alipay_sub@@face_to_h5 | 0609 |
+| 支付宝应用授权个码 | alipay_sub@@person | 0610 |
 | 支付宝直付通当面付 | alipay_zft@@face_to_face | 0700 |
 | 支付宝直付通h5支付 | alipay_zft@@h5 | 0701 |
 | 支付宝直付通pc支付 | alipay_zft@@pc | 0702 |
