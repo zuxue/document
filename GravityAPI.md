@@ -1,4 +1,4 @@
-<h3 id="HT8d0">正常下单</h3>
+### 正常下单
 POST
 
 `domain + /open/order/create`
@@ -40,7 +40,7 @@ POST
 }
 ```
 
-<h3 id="GTp7M">订单查询</h3>
+### 订单查询
 POST
 
 `domain + /open/order/query`
@@ -71,7 +71,7 @@ POST
 }
 ```
 
-<h3 id="xMUbr">异步回调</h3>
+### 异步回调
 **请求方式：**POST
 
 `Content-Type: application/json`
@@ -107,14 +107,14 @@ POST
 }
 ```
 
-<h3 id="Ix2gq">签名方法</h3>
+### 签名方法
 1. 将参数名按ASCLL字典序顺序排序
 2. 将参数按照key=>value键值对的形式拼接，形成一个字符串 类似 { a=b&b=c&c=d }
 3. 在字符串末尾拼接{ &key=`key` } key 为每个用户的 密钥
 4. 将最终生成的字符串进行md5加密 得到一个32位字符串
 5. 将md5值转为大写
 
-<h4 id="YOLYZ">php示例代码</h4>
+#### php示例代码
 常规接入签名方法
 
 ```php
@@ -140,7 +140,7 @@ function makeSign(array $arr, string $key)
 }
 ```
 
-<h4 id="UKQoP">golang示例代码</h4>
+#### golang示例代码
 ```go
 // 参数:
 //   params - 参与签名的参数键值对，会自动过滤掉'sign'键、nil值和空字符串值
@@ -171,7 +171,7 @@ func MakeSign(params map[string]any, key string) string {
 }
 ```
 
-<h4 id="WBrR4">java示例代码</h4>
+#### java示例代码
 ```java
 import java.util.*;
 import java.security.MessageDigest;
@@ -220,7 +220,7 @@ public class SignUtil {
 }
 ```
 
-<h4 id="GPkTp">python示例代码</h4>
+#### python示例代码
 ```python
 import hashlib
 
