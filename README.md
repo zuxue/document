@@ -28,7 +28,7 @@ POST
 <h3 id="tBbFo">仿易支付下单(使用form表单提交)</h3>
 POST
 
-`domain + /submit`
+`domain + /submit.php`
 
 `Content-Type: application/x-www-form-urlencoded`
 
